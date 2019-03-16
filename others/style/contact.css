@@ -1,0 +1,31 @@
+.contact-me {
+  background-color: #18202e;
+  padding: 3em 0;
+  color: #d5e7e7;
+}
+
+.contact-me .wrapper {
+  padding: 0 2em;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 5px;
+}
+
+.contact-me .wrapper .button {
+  margin: 0;
+  text-transform: none;
+}
+
+/*
+@keyframes wave {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+*/
+/*# sourceMappingURL=contact.css.map */

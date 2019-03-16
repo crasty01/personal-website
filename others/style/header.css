@@ -1,0 +1,113 @@
+.main-header {
+  padding: 1.25em 0;
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.main-header.fixed {
+  position: fixed;
+}
+
+.main-header .nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "logo . nav";
+}
+
+.main-header .nav .logo {
+  fill: #18202e;
+  height: 48px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+.main-header .nav .logo a {
+  margin: -.5em;
+  padding: .5em;
+  position: relative;
+}
+
+.main-header .nav .logo a svg {
+  height: 3em;
+  fill: currentColor;
+  -webkit-transition: 250ms ease-in;
+  transition: 250ms ease-in;
+}
+
+.main-header .nav .logo a:hover svg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  fill: #d66829;
+}
+
+.main-header .nav .logo a::before {
+  content: "BETA";
+  position: absolute;
+  left: calc(100% - .5em);
+  top: .5em;
+  font-size: .75em;
+  padding-right: .5em;
+}
+
+.main-header .nav ul {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nav;
+  margin-right: -.5em;
+}
+
+.main-header .nav ul li a {
+  padding: 0 .5em;
+  white-space: nowrap;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header .nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: .5em;
+  right: .5em;
+  bottom: 0;
+  height: 5px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  background-color: #d66829;
+}
+
+.main-header .nav ul li a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.main-header .nav ul li.active a::before {
+  content: "";
+  position: absolute;
+  left: .5em;
+  right: .5em;
+  top: 0;
+  height: 5px;
+  background-color: #d66829;
+}
+/*# sourceMappingURL=header.css.map */

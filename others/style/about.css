@@ -1,0 +1,50 @@
+.about-me {
+  position: relative;
+  background-color: #18202e;
+  color: #d5e7e7;
+  padding: 3em 0;
+  font-size: 1.1em;
+}
+
+.about-me .wrapper {
+  padding: 0 2em;
+}
+
+.about-me .wrapper .about-me--text {
+  white-space: normal;
+  font-weight: 300;
+  text-align: center;
+  padding: .25em;
+  margin: .1em;
+}
+
+.about-me .wrapper .button {
+  margin-bottom: 0;
+}
+
+.about-me::after {
+  content: "";
+  height: .75em;
+  width: .75em;
+  position: absolute;
+  background-color: #d66829;
+  bottom: 0;
+  right: 0;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  margin: .25em;
+}
+
+@media (min-width: 700px) {
+  .about-me .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em 3em;
+  }
+  .about-me::after {
+    display: none;
+  }
+}
+/*# sourceMappingURL=about.css.map */

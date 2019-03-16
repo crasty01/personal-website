@@ -1,0 +1,157 @@
+.gallery .button {
+  margin-bottom: 3em;
+}
+
+.gallery .wrapper {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
+.gallery .wrapper .project {
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .wrapper .project figure .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 80vh;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.gallery .wrapper .project figure .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #d5e7e7;
+  padding: 1.125em 1.5em;
+  font-weight: 500;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.gallery .wrapper .project figure .description .arrow {
+  width: 3.5em;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  margin-right: 0;
+  background-color: #d66829;
+  overflow: hidden;
+}
+
+.gallery .wrapper .project figure .description .arrow:before {
+  content: "";
+  top: 1.1em;
+  bottom: 1.1em;
+  left: 1.1em;
+  right: 1.1em;
+  border: #18202e 0.65em solid;
+  border-left: none;
+  border-bottom: none;
+  position: absolute;
+  -webkit-transform: translateX(-45px) rotate(45deg);
+          transform: translateX(-45px) rotate(45deg);
+  -webkit-transition: 0ms ease-in-out;
+  transition: 0ms ease-in-out;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.gallery .wrapper .project:hover figure img {
+  -webkit-transform: translateY(-1.75em);
+          transform: translateY(-1.75em);
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+.gallery .wrapper .project:hover figure .description {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.gallery .wrapper .project:hover figure .description .arrow:before {
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  -webkit-transform: translateX(-3px) rotate(45deg);
+          transform: translateX(-3px) rotate(45deg);
+}
+
+.gallery .wrapper.project-wrapper .project figure img {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.gallery .wrapper.project-wrapper .project figure .description {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.gallery .wrapper.project-wrapper .project figure .description .arrow:before {
+  -webkit-transition: 0ms;
+  transition: 0ms;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.gallery .wrapper.project-wrapper .project:hover figure img {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.gallery .wrapper.project-wrapper .project:hover figure .description {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.gallery .wrapper.project-wrapper .project:hover figure .description .arrow:before {
+  -webkit-transition: 0;
+  transition: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+@media (min-width: 700px) {
+  .gallery .wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery .wrapper .project figure .img {
+    -webkit-transform: translateY(-1.75em);
+            transform: translateY(-1.75em);
+    -webkit-transition-delay: 150ms;
+            transition-delay: 150ms;
+  }
+  .gallery .wrapper .project figure .description {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .gallery .wrapper .project figure .description .arrow:before {
+    -webkit-transition: 250ms ease-in-out;
+    transition: 250ms ease-in-out;
+    -webkit-transform: translateX(-3px) rotate(45deg);
+            transform: translateX(-3px) rotate(45deg);
+  }
+}
+/*# sourceMappingURL=gallery.css.map */

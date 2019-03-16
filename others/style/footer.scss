@@ -1,0 +1,32 @@
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+.main-footer {
+    display: grid;
+    margin: .5em 0;
+    place-content: center;
+    padding: 2em 0;
+    align-self: flex-end;
+
+    &.fixed {
+        position: fixed;
+    }
+
+    a {
+        padding: 0 1em;
+        white-space: nowrap;
+        font-size: 1em;
+        color: $dark;
+        line-height: 48px;
+        transition: 250ms ease-in;
+        position: relative;
+        transform: scale(1);
+        font-weight: 700;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+}

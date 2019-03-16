@@ -1,0 +1,31 @@
+.main-footer {
+  display: -ms-grid;
+  display: grid;
+  margin: .5em 0;
+  place-content: center;
+  padding: 2em 0;
+  align-self: flex-end;
+}
+
+.main-footer.fixed {
+  position: fixed;
+}
+
+.main-footer a {
+  padding: 0 1em;
+  white-space: nowrap;
+  font-size: 1em;
+  color: #18202e;
+  line-height: 48px;
+  -webkit-transition: 250ms ease-in;
+  transition: 250ms ease-in;
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  font-weight: 700;
+}
+
+.main-footer a:hover {
+  color: #d66829;
+}
+/*# sourceMappingURL=footer.css.map */

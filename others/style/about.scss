@@ -1,0 +1,55 @@
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+.about-me {
+    position: relative;
+    background-color: $dark;
+    color: $light;
+    padding: 3em 0;
+    font-size: 1.1em;
+
+    .wrapper {
+        padding: 0 2em;
+
+        .about-me--text {
+            white-space: normal;
+            font-weight: 300;
+            text-align: center;
+            padding: .25em;
+            margin: .1em;
+        }
+
+        .button {
+            margin-bottom: 0;
+        }
+    }
+
+    &::after {
+        content: "";
+        height: .75em;
+        width: .75em;
+        position: absolute;
+        background-color: $accent;
+        bottom: 0;
+        right: 0;
+        transform-origin: 100% 100%;
+        transform: scale(2);
+        margin: .25em;
+    }
+}
+
+@media (min-width: 700px) {
+    .about-me {
+        & .wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2em 3em;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
