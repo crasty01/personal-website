@@ -1,0 +1,63 @@
+canvas {
+  cursor: crosshair;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700,900&subset=latin-ext');
+
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+
+.game {
+  & .onmobile {
+    display: none;
+
+    & span {
+      padding: .75em 2em;
+      justify-self: center;
+      max-width: 400px;
+      text-align: center;
+      font-family: Roboto Mono;
+    }
+  }
+
+  & .nadpis {
+    text-align: center;
+  }
+
+  canvas {
+    cursor: crosshair;
+  }
+}
+
+
+@media (max-width: 656px) {
+  .game {
+    & #canvas {
+      display: none;
+    }
+
+    & .onmobile {
+      display: grid;
+      position: relative;
+      padding: 3em 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: -45px;
+        left: -35px;
+        background-image: url(../quote.svg);
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: .075;
+      }
+    }
+  }
+}

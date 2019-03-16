@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700,900&subset=latin-ext");
+canvas {
+  cursor: crosshair;
+}
+
+.game .onmobile {
+  display: none;
+}
+
+.game .onmobile span {
+  padding: .75em 2em;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 400px;
+  text-align: center;
+  font-family: Roboto Mono;
+}
+
+.game .nadpis {
+  text-align: center;
+}
+
+.game canvas {
+  cursor: crosshair;
+}
+
+@media (max-width: 656px) {
+  .game #canvas {
+    display: none;
+  }
+  .game .onmobile {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    padding: 3em 0;
+  }
+  .game .onmobile::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -45px;
+    left: -35px;
+    background-image: url(../quote.svg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .075;
+  }
+}
+/*# sourceMappingURL=game.css.map */

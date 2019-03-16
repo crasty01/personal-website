@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parallax</title>
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+
+  <script src="./script/script.js"></script>
+</head>
+
+<body>
+  <div class="all">
+    <header class="doc-header">
+      <div class="nav-wrapper grid">
+        <nav>
+          <div class="logo">
+            <img src="./img/logo.png" alt="logo - propůjčená část loga madmonq">
+          </div>
+          <ul class="menu" id="menu">
+            <li class="active"><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">contacts</a></li>
+            <li><a href="#">gallery</a></li>
+          </ul>
+          <a onclick="document.querySelector('#menu').classList.toggle('active')" class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <div class="nav-other">
+            <a href="#" class="search likeButtonBox">
+              <i class="fas fa-search"></i>
+            </a>
+            <a href="#" class="profile likeButtonBox">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="hero grid">
+        <h1 class="h1-napis landing landing--slow-small">
+          Fresh. sweet.<br>simply the best.
+        </h1>
+      </div>
+    </header>
+
+    <main class="doc-main">
+      <section class="welcome grid">
+        <div class="wrapper">
+          <div class="text">
+            <h2 class="landing landing--fast">welcome, comrade!</h2>
+            <p class="landing landing--fast">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium facere maiores deserunt asperiores
+              aperiam beatae pariatur ipsum, voluptatem sequi, atque voluptas.
+            </p>
+            <a href="#" class="button landing landing--fast">read more</a>
+          </div>
+          <div class="img landing landing--slow">
+            <div class="wrapper">
+              <img src="./img/welcome_2.jpg" alt="welcome picture">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="offer grid">
+        <div class="wrapper">
+          <h2>What can we offer you</h2>
+          <div class="blocks">
+            <div class="block landing landing--slow">
+              <img src="./img/round-update-24px.svg" alt="">
+              <div>
+                <h3>sweetness</h3>
+                <span>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+                <a href="#" class="button dark">read more</a>
+              </div>
+            </div>
+            <div class="block landing landing--slow">
+              <img src="./img/round-adjust-24px.svg" alt="">
+              <div>
+                <h3>freshness</h3>
+                <span>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+                <a href="#" class="button dark">read more</a>
+              </div>
+            </div>
+            <div class="block landing landing--slow">
+              <img src="./img/outline-info-24px.svg" alt="">
+              <div>
+                <h3>friendliness</h3>
+                <span>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+                <a href="#" class="button dark">read more</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="button landing landing--fast">view more</a>
+        </div>
+      </section>
+
+      <section class="pride grid">
+        <div class="wrapper">
+          <h2>
+            we are proud on ourself
+            <span>
+              Our results become our reputation — and so it is a matter of personal pride that we do everything we
+              can to make you fat and satisfied.
+            </span>
+          </h2>
+          <div class="blocks">
+            <div class="block landing landing--slow-small">
+              <span class="block-num num-increasing">22709</span>
+              <h3 class="h3InBlock">costumers<span>that died due to over satisfaction</span></h3>
+              <!--<p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et eum enim iure rerum facere est minus
+                quidem rem libero sed amet.
+              </p>-->
+            </div>
+            <div class="block landing landing--slow-small">
+              <span class="block-num num-increasing">723469</span>
+              <h3 class="h3InBlock">Pears<span>eaten every day</span></h3>
+              <!--<p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et eum enim iure rerum facere est minus
+                quidem rem libero sed amet.
+              </p>-->
+            </div>
+            <div class="block landing landing--slow-small">
+              <span class="block-num num-increasing">195</span>
+              <h3 class="h3InBlock">Countries<span>we are eaten in</span></h3>
+              <!--<p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et eum enim iure rerum facere est minus
+                quidem rem libero sed amet.
+              </p>-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team grid">
+        <div class="wrapper">
+          <h2>what you can cook with us</h2>
+          <div class="blocks">
+            <div class="block landing landing--slow">
+              <!--<img src="./img/face_01.jpg" alt="">-->
+              <div class="imgbg"></div>
+              <div class="popis">
+                <span class="name">Pear with cinnamon</span>
+                <span class="position">by John doe</span>
+              </div>
+            </div>
+            <div class="block landing landing--slow">
+              <!--<img src="./img/face_02.jpg" alt="">-->
+              <div class="imgbg"></div>
+              <div class="popis">
+                <span class="name">Pearpie</span>
+                <span class="position">by John Smith</span>
+              </div>
+            </div>
+            <div class="block landing landing--slow">
+              <!--<img src="./img/face_03.jpg" alt="">-->
+              <div class="imgbg"></div>
+              <div class="popis">
+                <span class="name">pancake with pears</span>
+                <span class="position">by sarah parker</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="button dark landing landing--fast">more recepies</a>
+        </div>
+      </section>
+
+    </main>
+    <footer class="doc-footer grid">
+      <div class="wrapper">
+        <div class="block landing landing--fast">
+          <h2>get in touch</h2>
+          <div class="adress">
+            <span>1234 central road</span>
+            <span>nowhere, rn9 num83r</span>
+            <span>phone: +1 123 456 789</span>
+            <span>E-mail: youre@douche.bag</span>
+          </div>
+        </div>
+        <div class="block landing landing--fast">
+          <h2>join us</h2>
+          <span>
+            always stay informed of the lastes company news and events!
+          </span>
+          <a href="#" class="button fullColor">read more</a>
+        </div>
+        <div class="block landing landing--fast">
+          <h2>follow us</h2>
+          <ul class="ulOfLikeButtonBox">
+            <li>
+              <a href="#" class="likeButtonBox">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="likeButtonBox">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="likeButtonBox">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="likeButtonBox">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://www.pslib.cz/daniel.vondra" class="author">
+        <span>&copy; Daniel Vondra 2019</span>
+      </a>
+    </footer>
+  </div>
+</body>
+
+</html>

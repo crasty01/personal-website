@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRIANGLE</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body onload="setup()">
+    <div class="all">
+        <div class="nums">
+            <input id="numA" type="number" value="30" placeholder="a">
+            <input id="numB" type="number" value="40" placeholder="b">
+            <input id="numC" type="number" value="50" placeholder="c">
+        </div>
+        <canvas id="canvas" height='500' width='500'></canvas>
+        <div id="error" class="disabled">
+            - nelze sestrojit -
+            <span>prosím, změnte hodnoty</span>        
+        </div>
+        <div class="setSize">
+            <div class="getBigger" onclick="getBigger()">get bigger</div>
+            <div class="getSmaller" onclick="getSmaller()">get smaller</div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

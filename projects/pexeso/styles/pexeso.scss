@@ -1,0 +1,106 @@
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+
+.pexeso {
+    grid-gap: 50px;
+    justify-content: stretch;
+
+    & .nadpis {
+        text-align: center;
+    }
+    & .pravidla-wrapper {
+        background-color: $dark;
+        color: $light;
+        padding: 2em;
+
+        & .pravidla {
+            text-align-last: left;
+            margin: 0 auto;
+            width: fit-content;
+            padding: .5em 1.75em;
+            & li {
+                list-style: disc;
+            }
+        }
+    }
+    & .score-wrapper {
+        background-color: $dark;
+        color: $light;
+        padding: 1.25em 2em;
+        justify-self: stretch;
+        place-content: center;
+        display: grid;
+        position: relative;
+
+        & .score {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            place-content: center;
+            max-width: 400px;
+            font-size: 1.25em;
+            padding: .75em .5em;
+
+            & div {
+                display: grid;
+                place-content: center;
+                place-items: center;
+                padding: 0 .5em;
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        display: block;
+                        font-size: 3em;
+                        font-weight: 900;
+                        color: $accent;
+                    }
+
+                    &:last-child {
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:nth-child(2) {
+                    font-weight: 900;
+                    font-size: 2em;
+                    margin-bottom: .75em;
+                }
+            }
+        }
+    }
+    & .pexesoBoard {
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        grid-gap: 5px;
+        grid-template-columns: repeat(10, 1fr);
+
+        &>figure {
+            z-index: 11;
+            position: relative;
+        }
+
+        & .konecHry {
+            opacity: 0;
+            transition: 750ms ease-in-out;
+            display: grid;
+            place-content: center;
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            & > span {
+                padding: 1em 2em;
+                margin-bottom: .5em;
+                background-color: $dark;
+                color: $light;
+                text-transform: uppercase;
+                justify-self: center;
+            }
+        }   
+    }
+}

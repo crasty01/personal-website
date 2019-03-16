@@ -1,0 +1,123 @@
+.pexeso {
+  grid-gap: 50px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.pexeso .nadpis {
+  text-align: center;
+}
+
+.pexeso .pravidla-wrapper {
+  background-color: #18202e;
+  color: #d5e7e7;
+  padding: 2em;
+}
+
+.pexeso .pravidla-wrapper .pravidla {
+  text-align-last: left;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: .5em 1.75em;
+}
+
+.pexeso .pravidla-wrapper .pravidla li {
+  list-style: disc;
+}
+
+.pexeso .score-wrapper {
+  background-color: #18202e;
+  color: #d5e7e7;
+  padding: 1.25em 2em;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  place-content: center;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+.pexeso .score-wrapper .score {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr auto 1fr;
+  place-content: center;
+  max-width: 400px;
+  font-size: 1.25em;
+  padding: .75em .5em;
+}
+
+.pexeso .score-wrapper .score div {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  padding: 0 .5em;
+}
+
+.pexeso .score-wrapper .score div span {
+  display: block;
+}
+
+.pexeso .score-wrapper .score div span:first-child {
+  display: block;
+  font-size: 3em;
+  font-weight: 900;
+  color: #d66829;
+}
+
+.pexeso .score-wrapper .score div span:last-child {
+  text-transform: uppercase;
+}
+
+.pexeso .score-wrapper .score div:nth-child(2) {
+  font-weight: 900;
+  font-size: 2em;
+  margin-bottom: .75em;
+}
+
+.pexeso .pexesoBoard {
+  margin: 0 auto;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-gap: 5px;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+}
+
+.pexeso .pexesoBoard > figure {
+  z-index: 11;
+  position: relative;
+}
+
+.pexeso .pexesoBoard .konecHry {
+  opacity: 0;
+  -webkit-transition: 750ms ease-in-out;
+  transition: 750ms ease-in-out;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pexeso .pexesoBoard .konecHry > span {
+  padding: 1em 2em;
+  margin-bottom: .5em;
+  background-color: #18202e;
+  color: #d5e7e7;
+  text-transform: uppercase;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+/*# sourceMappingURL=pexeso.css.map */

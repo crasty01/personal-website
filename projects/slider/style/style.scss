@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin-ext");
+
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+body,
+html {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Roboto;
+}
+
+.all {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: $dark;
+    overflow: hidden;
+}
+
+body * {
+    user-select: none;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: (21*9*2px);
+    width: calc((21*9*2px)/9*21);
+    background-color: $white;
+    position: relative;
+
+    & .sliderImage {
+        max-width: 100%;
+        max-height: 100%;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
+
+.button {
+    display: block;
+    width: 96px;
+    height: 48px;
+    background-color: $accent;
+    transition: 250ms ease-in-out;
+    transform-origin: 0% 50%;
+    position: absolute;
+    cursor: pointer;
+
+    &:before {
+        width: 8px;
+        height: 8px;
+        content: "";
+        top: 13px;
+        left: 13px;
+        border: $dark 12px solid;
+        border-left: none;
+        border-bottom: none;
+        position: absolute;
+        transform: rotate(45deg);
+        transition: transform 250ms ease-in-out;
+        transition-delay: 200ms;
+    }
+
+    &.btn-backward {
+        top: 50%;
+        transform-origin: left center;
+        transform: translate(-50%, -50%);
+
+        &::before {
+            transform: translateX(48px) rotate(225deg);
+        }
+    }
+
+    &.btn-forward {
+        top: 50%;
+        right: 0;
+        transform-origin: right center;
+        transform: translate(50%, -50%);
+    }
+
+    &:hover {
+        &.btn-backward {
+            transform: translateY(-50%);
+            &::before {
+                transform: translateX(24px) rotate(225deg);
+            }
+        }
+
+        &.btn-forward {
+            transform: translateY(-50%);
+            &::before {
+                transform: translateX(24px) rotate(45deg);
+            }
+        }
+    }
+}
+
+.sliderTime {
+    background: $accent;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    right: 0;
+
+    &.active {
+        animation: activated 3s linear;
+    }
+}
+
+@media (max-width: 900px) {
+    .slider {
+        height: (21px*9*1.5);
+        width: calc((21px*9*1.5)/9*21);
+    }
+    .button {
+        width: 48px;
+        &.btn-forward {
+            transform: translateY(-50%);
+        }    
+        &.btn-backward {
+            transform: translateY(-50%);
+            &::before {
+                transform: translateX(0) rotate(225deg);
+            }
+        }
+    
+        &:hover {
+            &.btn-backward {
+                &::before {
+                    transform: rotate(225deg);
+                }
+            }
+    
+            &.btn-forward {
+                &::before {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 670px) {
+    .slider {
+        height: (21px*9);
+        width: calc((21px*9)/9*21);
+    }.button {
+        width: 24px;
+        height: 24px;
+    
+        &:before {
+            width: 4px;
+            height: 4px;
+            top: 6px;
+            left: 6px;
+            border: $dark 6px solid;
+            border-left: none;
+            border-bottom: none;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .slider {
+        height: (21px*9*.75);
+        width: calc((21px*9*.75)/9*21);
+    }
+}
+@media (max-width: 350px) {
+    .slider {
+        height: (21px*9*.5);
+        width: calc((21px*9*.5)/9*21);
+    }
+}
