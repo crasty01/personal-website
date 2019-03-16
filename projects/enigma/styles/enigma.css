@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&subset=latin-ext");
+.enigma {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  grid-gap: 5em;
+}
+
+.enigma .nadpis {
+  text-align: center;
+}
+
+.enigma .nadpis span {
+  display: block;
+  font-size: .35em;
+}
+
+.enigma .aboutenigma {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: #18202e;
+  color: #d5e7e7;
+  padding: 3em 0;
+  font-size: 1.1em;
+  max-width: calc(100vw - 1em);
+}
+
+.enigma .aboutenigma .wrapper {
+  padding: 0 2em;
+}
+
+.enigma .aboutenigma .wrapper p {
+  white-space: normal;
+  font-weight: 300;
+  text-align: left;
+  padding: .5em;
+  margin: .1em;
+}
+
+.enigma .videa {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  grid-gap: 10px;
+}
+
+.enigma .enigmaboard {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  grid-gap: 3em;
+}
+
+.enigma .enigmaboard > .mono * {
+  font-family: 'Roboto Mono';
+}
+
+.enigma .enigmaboard .onmobile {
+  display: none;
+}
+
+.enigma .enigmaboard .onmobile span {
+  padding: .75em 2em;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 400px;
+  text-align: center;
+}
+
+.enigma .enigmaboard .zapis {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  margin-bottom: 6em;
+}
+
+.enigma .enigmaboard .zapis div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[16];
+      grid-template-rows: repeat(16, 1fr);
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  justify-items: stretch;
+  grid-column-gap: 10px;
+  position: relative;
+  grid-row-gap: 3px;
+}
+
+.enigma .enigmaboard .zapis div span {
+  padding: .25em;
+}
+
+.enigma .enigmaboard .zapis div span.cast-kodu {
+  background-color: #d5e7e7;
+  text-align: center;
+}
+
+.enigma .enigmaboard .zapis div span.kod-hodnota {
+  padding-left: 2em;
+}
+
+.enigma .enigmaboard .zapis div::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -20px;
+  width: 5px;
+  background-color: #d66829;
+}
+
+.enigma .enigmaboard .zapis div::after {
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  left: -25px;
+  border: transparent 8px solid;
+  border-top: #d66829 30px solid;
+}
+
+.enigma .enigmaboard .zapis .code-priklad {
+  text-align: center;
+  margin-top: 2em;
+  padding: .25em .75em;
+}
+
+.enigma .enigmaboard .code {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.enigma .enigmaboard .code input {
+  background-color: transparent;
+  border: none;
+  border-bottom: #18202e 3px solid;
+  text-transform: uppercase;
+  text-align: center;
+  padding: .25em 1.25em;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: block;
+  font-size: 1em;
+  width: 18em;
+}
+
+.enigma .enigmaboard .code input:focus {
+  border-bottom-color: #d66829;
+  outline: none;
+}
+
+.enigma .enigmaboard .code.active::after {
+  content: "";
+  top: -1em;
+  left: -1em;
+  right: -1em;
+  height: 4em;
+  opacity: 0.5;
+  position: absolute;
+  background-color: #d66829;
+  z-index: 11;
+}
+
+.enigma .enigmaboard .keyboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[41];
+      grid-template-columns: repeat(41, 1fr);
+  grid-gap: 3px;
+  max-width: 683.75px;
+}
+
+.enigma .enigmaboard .keyboard div {
+  -ms-grid-column-span: 4;
+      grid-column-end: span 4;
+  background-color: #d5e7e7;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-width: 4em;
+  height: 2.75em;
+  -webkit-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out;
+  text-transform: uppercase;
+}
+
+.enigma .enigmaboard .keyboard div.mezernik {
+  -ms-grid-column-span: 24;
+      grid-column-end: span 24;
+}
+
+.enigma .enigmaboard .keyboard div.mezera {
+  -ms-grid-column-span: 2;
+      grid-column-end: span 2;
+  min-width: auto;
+  padding: 0;
+  background-color: transparent;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-1 {
+  -ms-grid-column-span: 1;
+      grid-column-end: span 1;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-2 {
+  -ms-grid-column-span: 2;
+      grid-column-end: span 2;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-3 {
+  -ms-grid-column-span: 3;
+      grid-column-end: span 3;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-4 {
+  -ms-grid-column-span: 4;
+      grid-column-end: span 4;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-5 {
+  -ms-grid-column-span: 5;
+      grid-column-end: span 5;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-6 {
+  -ms-grid-column-span: 6;
+      grid-column-end: span 6;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-7 {
+  -ms-grid-column-span: 7;
+      grid-column-end: span 7;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-8 {
+  -ms-grid-column-span: 8;
+      grid-column-end: span 8;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-9 {
+  -ms-grid-column-span: 9;
+      grid-column-end: span 9;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-10 {
+  -ms-grid-column-span: 10;
+      grid-column-end: span 10;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-11 {
+  -ms-grid-column-span: 11;
+      grid-column-end: span 11;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-12 {
+  -ms-grid-column-span: 12;
+      grid-column-end: span 12;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-13 {
+  -ms-grid-column-span: 13;
+      grid-column-end: span 13;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-14 {
+  -ms-grid-column-span: 14;
+      grid-column-end: span 14;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-15 {
+  -ms-grid-column-span: 15;
+      grid-column-end: span 15;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-16 {
+  -ms-grid-column-span: 16;
+      grid-column-end: span 16;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-17 {
+  -ms-grid-column-span: 17;
+      grid-column-end: span 17;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-18 {
+  -ms-grid-column-span: 18;
+      grid-column-end: span 18;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-19 {
+  -ms-grid-column-span: 19;
+      grid-column-end: span 19;
+}
+
+.enigma .enigmaboard .keyboard div.mezera.mezera-20 {
+  -ms-grid-column-span: 20;
+      grid-column-end: span 20;
+}
+
+.enigma .enigmaboard .keyboard div.active {
+  background-color: #d66829;
+  z-index: 2;
+  outline: #d66829 3px solid;
+}
+
+.enigma .enigmaboard .inAndOut {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3px;
+  background-color: #d5e7e7;
+  max-width: 800px;
+  min-width: calc(100% - .5em);
+}
+
+.enigma .enigmaboard .inAndOut span {
+  font-weight: 700;
+  display: block;
+  padding: 1.25em 2em;
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-size: 1em;
+  line-height: 120%;
+  min-height: 1.2em;
+  position: relative;
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+.enigma .enigmaboard .inAndOut span::before {
+  content: ">";
+  position: absolute;
+  right: calc(100% - 2em);
+  content: ">";
+  text-transform: none;
+}
+
+.enigma .enigmaboard .inAndOut #input {
+  padding-bottom: .5em;
+}
+
+.enigma .enigmaboard .inAndOut #input::before {
+  top: 1.25em;
+  bottom: .25em;
+}
+
+.enigma .enigmaboard .inAndOut #output {
+  padding-top: .5em;
+}
+
+.enigma .enigmaboard .inAndOut #output::before {
+  top: .25em;
+  bottom: 1.25em;
+}
+
+@media (max-width: 750px) {
+  .enigma .aboutenigma {
+    font-size: .95em;
+  }
+  .enigma .videa {
+    display: none;
+  }
+  .enigma .enigmaboard h2,
+  .enigma .enigmaboard .code,
+  .enigma .enigmaboard .keyboard,
+  .enigma .enigmaboard .inAndOut,
+  .enigma .enigmaboard .zapis {
+    display: none;
+  }
+  .enigma .enigmaboard .onmobile {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    padding: 3em 0;
+  }
+  .enigma .enigmaboard .onmobile::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -45px;
+    left: -35px;
+    background-image: url(../quote.svg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .075;
+  }
+}
+
+@media (min-width: 700px) {
+  .aboutenigma .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em 3em;
+  }
+  .aboutenigma::after {
+    display: none;
+  }
+}
+/*# sourceMappingURL=enigma.css.map */

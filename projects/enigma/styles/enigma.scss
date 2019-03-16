@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&subset=latin-ext');
+
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+
+.enigma {
+    display: grid;
+    justify-content: stretch;
+    grid-gap: 5em;
+
+    & .nadpis {
+        text-align: center;
+
+        & span {
+            display: block;
+            font-size: .35em;
+        }
+    }
+
+    & .aboutenigma {
+        display: grid;
+        place-content: center;
+        background-color: $dark;
+        color: $light;
+        padding: 3em 0;
+        font-size: 1.1em;
+        max-width: calc(100vw - 1em);
+
+        & .wrapper {
+            padding: 0 2em;
+
+            & p {
+                white-space: normal;
+                font-weight: 300;
+                text-align: left;
+                padding: .5em;
+                margin: .1em;
+            }
+        }
+    }
+
+    & .videa {
+        display: grid;
+        place-content: center;
+        grid-gap: 10px;
+    }
+
+    & .enigmaboard {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-gap: 3em;
+
+        &>.mono * {
+            font-family: 'Roboto Mono';
+        }
+
+        & .onmobile {
+            display: none;
+
+            & span {
+                padding: .75em 2em;
+                justify-self: center;
+                max-width: 400px;
+                text-align: center;
+            }
+        }
+
+        & .zapis {
+            display: grid;
+            grid-gap: 5px;
+            justify-content: center;
+            justify-items: center;
+            margin-bottom: 6em;
+
+            & div {
+                display: grid;
+                grid-template-rows: repeat(16, 1fr);
+                grid-template-columns: auto auto auto;
+                justify-items: stretch;
+                grid-column-gap: 10px;
+                position: relative;
+                grid-row-gap: 3px;
+
+                & span {
+                    padding: .25em;
+
+                    &.cast-kodu {
+                        background-color: $light;
+                        text-align: center;
+                    }
+
+                    &.kod-hodnota {
+                        padding-left: 2em;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -5px;
+                    bottom: -5px;
+                    left: -20px;
+                    width: 5px;
+                    background-color: $accent;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -27px;
+                    left: -25px;
+                    border: transparent 8px solid;
+                    border-top: $accent 30px solid;
+                }
+            }
+
+            & .code-priklad {
+                text-align: center;
+                margin-top: 2em;
+                padding: .25em .75em;
+            }
+        }
+
+        & .code {
+            display: grid;
+            place-content: center;
+            position: relative;
+
+            & input {
+                background-color: transparent;
+                border: none;
+                border-bottom: $dark 3px solid;
+                text-transform: uppercase;
+                text-align: center;
+                padding: .25em 1.25em;
+                box-sizing: content-box;
+                display: block;
+                font-size: 1em;
+                width: 18em;
+
+                &:focus {
+                    border-bottom-color: $accent;
+                    outline: none;
+                }
+            }
+
+            &.active::after {
+                content: "";
+                top: -1em;
+                left: -1em;
+                right: -1em;
+                height: 4em;
+                opacity: 0.5;
+                position: absolute;
+                background-color: #d66829;
+                z-index: 11;
+            }
+        }
+
+        & .keyboard {
+            display: grid;
+            grid-template-columns: repeat(41, 1fr);
+            grid-gap: 3px;
+            max-width: 683.75px;
+
+            & div {
+                grid-column-end: span 4;
+                background-color: $light;
+                display: grid;
+                place-content: center;
+                min-width: 4em;
+                height: 2.75em;
+                transition: 50ms ease-in-out;
+                text-transform: uppercase;
+
+                &.mezernik {
+                    grid-column-end: span 24;
+                }
+
+                &.mezera {
+                    grid-column-end: span 2;
+                    min-width: auto;
+                    padding: 0;
+                    background-color: transparent;
+
+                    @for $i from 1 through 20 {
+                        &.mezera-#{$i} {
+                            grid-column-end: span #{$i};
+                        }
+                    }
+                }
+
+                &.active {
+                    background-color: $accent;
+                    z-index: 2;
+                    outline: $accent 3px solid;
+                }
+            }
+        }
+
+        & .inAndOut {
+            display: grid;
+            grid-gap: 3px;
+            background-color: $light;
+            max-width: 800px;
+            min-width: calc(100% - .5em);
+
+            & span {
+                font-weight: 700;
+                display: block;
+                padding: 1.25em 2em;
+                text-transform: uppercase;
+                letter-spacing: .35em;
+                box-sizing: content-box;
+                font-size: 1em;
+                line-height: 120%;
+                min-height: 1.2em;
+                position: relative;
+                white-space: pre-line;
+                word-wrap: break-word;
+                word-break: break-all;
+                max-width: 100%;
+
+                &::before {
+                    content: ">";
+                    position: absolute;
+                    right: calc(100% - 2em);
+                    content: ">";
+                    text-transform: none;
+                }
+            }
+
+            & #input {
+                padding-bottom: .5em;
+
+                &::before {
+                    top: 1.25em;
+                    bottom: .25em;
+                }
+            }
+
+            & #output {
+                padding-top: .5em;
+
+                &::before {
+                    top: .25em;
+                    bottom: 1.25em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:750px) {
+    .enigma {
+
+        & .aboutenigma {
+            font-size: .95em;
+        }
+
+        & .videa {
+            display: none;
+        }
+
+        & .enigmaboard {
+
+            & h2,
+            & .code,
+            & .keyboard,
+            & .inAndOut,
+            & .zapis {
+                display: none;
+            }
+
+            & .onmobile {
+                display: grid;
+                position: relative;
+                padding: 3em 0;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 300px;
+                    height: 300px;
+                    top: -45px;
+                    left: -35px;
+                    background-image: url(../quote.svg);
+                    background-size: 60%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: .075;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .aboutenigma {
+        .wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2em 3em;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
