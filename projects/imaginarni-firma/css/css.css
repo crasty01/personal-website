@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700');
+body, body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    text-transform: uppercase;
+    line-height: 100%;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+}
+body {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+}
+body > * {
+    display: block;
+}
+script {
+    display: none;
+}
+
+.nav_desktop {display: none}
+@media (min-width:770px) {
+    .nav_desktop {
+        display: block;
+    }
+    .nav_mobile {
+        display: none;
+    }
+}
+
+
+
+
+body {
+    background-color: rgb(23,23,23);
+}
+.all {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #563672;
+    background-color: rgb(220, 220, 220);
+}
+
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    height: 55px;
+    padding: 10px 2.5rem;
+    background-color: #8e3c77;
+    background-color: rgb(23,23,23);
+}
+.fig_logo {
+    height: 100%;
+    float: left;
+    margin: 5px 0;
+}
+.fig_logo > img {
+    height: 25px;
+}
+@media (min-width:770px) {
+    @supports (display: grid) {
+        header {
+            padding: 10px 0;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: "logo .";
+            place-content: center;
+        }
+        .fig_logo {
+            float: none;
+        }
+    }
+    @supports not (display: grid) {
+        header {
+            padding: 10px 0;
+        }
+        .fig_logo {
+            width: 25%;
+            margin-left: 25%;
+            text-align: center;
+        }
+    }
+}
+@media (min-width:1200px) {
+    @supports (display: grid) {
+        header {
+            padding: 10px 0;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-areas: "logo .";
+            place-content: center;
+        }
+        .fig_logo {
+            float: none;
+        }
+    }
+    @supports not (display: grid) {
+        header {
+            padding: 10px 0;
+        }
+        .fig_logo {
+            width: 40%;
+            margin-left: 20%;
+            text-align: center;
+        }
+    }
+}
+
+.nav_mobile {
+    width: 35px;
+    height: 35px;
+    /*background-color: #000000;*/
+    float: right;
+    position: relative;
+}
+.nav_mobile > .nav_ul{
+    position: fixed;
+    left: 0;right: 0;top: 0;bottom: 100%;
+    overflow: hidden;
+    z-index: 2;
+    background: rgba(0,0,0,.85);
+    transition: 750ms ease-in-out;
+}
+.nav_mobile ul {
+    position: absolute;
+    bottom: 2rem;
+    right: 35px;
+}
+.nav_mobile li {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: right;
+    padding-right: 2.5rem;
+    line-height: 125%
+}
+.nav_mobile a {
+    padding: 0.2em  0 0.2em 0.5em;
+    transition: 250ms ease-in-out;
+}
+.nav_mobile a:hover {
+    color: rgba(172, 108, 228, 0.75);
+}
+
+
+
+
+
+
+.nav_mobile > input {
+    z-index: 4;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+}
+.nav_mobile > input:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+}
+.nav_mobile > input:checked ~ span:first-of-type {
+    transform: translateX(3px) rotate(45deg);
+}
+.nav_mobile > input:checked ~ span:last-of-type {
+    transform: translateX(3px) rotate(-45deg);
+}
+.nav_mobile > span {
+    position: absolute;
+    top: 14.5px;
+    display: block;
+    z-index: 3;
+    height: 5px;
+    width: 35px;
+    border-radius: 2.5px;
+    background-color: rgb(220, 220, 220);
+    transition: 500ms ease-in-out 250ms;
+}
+.nav_mobile > span:first-of-type {
+    top: 4px;
+    transform-origin: 3px 3px;
+}
+.nav_mobile > span:last-of-type {
+    top: 25px;
+    transform-origin: 3px 3px;
+}
+.nav_mobile > input:checked ~ .nav_ul {
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    padding-top: 55px
+}
+
+
+
+
+@media (min-width:770px) {
+    .nav_desktop > ul {
+        margin-top: 10rem;
+    }
+    .nav_desktop li {
+        display: inline;
+        font-size: 3rem;
+        font-weight: 800;
+        text-align: left;
+        line-height: 125%;
+    }
+    .nav_desktop a {
+        padding: 0.2em  0 0.2em 0.5em;
+        transition: color 250ms ease-in-out;
+    }
+    .nav_desktop a:hover {
+        color: rgba(172, 108, 228, 0.75);
+    }
+    @supports not (display: grid) {
+        .wrapper {
+            height: 1355px
+        }
+        main {
+            float: left;
+            width: 75%;
+        }
+        .nav_desktop {
+            background-color: rgb(23,23,23);
+            float: right;
+            width: 25%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+
+        .gallery > figure:first-of-type {
+            width: 50%;
+            float: left;
+        }
+        .gallery > figure:nth-of-type(2) {
+            width: 50%;
+            float:right;
+        }
+    }
+    @supports (display: grid) {
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 1fr;
+            grid-template-areas: "main main main nav"; 
+        }
+        main {
+            grid-area: main;
+        }
+        .nav_desktop {
+            background-color: rgb(23,23,23);
+            overflow: hidden;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr)
+        }
+        .gallery > h1 {
+            grid-column: 1 / 3;
+        }
+        .gallery > figure:last-of-type {
+            grid-column: 1 / 3;
+        }
+    }
+}
+@media (min-width:1200px) {
+    @supports not (display: grid) {
+        main {
+            width: 80%;
+            float: left;
+        }
+        .nav_desktop {
+            width: 20%;
+            float: right;
+            height: 100%;
+        }
+        article {
+            width: 50%;
+            float: left;
+        }
+        .gallery {
+            width: 50%;
+            float: right;
+        }
+    }
+    @supports (display: grid) {
+        .wrapper {
+            display: grid;
+            grid-template-columns:  repeat(4, 1fr) 1fr;
+            grid-template-areas: "main main main main nav";
+            height: auto;
+        }
+        main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            grid-template-areas: "article gallery";
+        }
+        main > article {
+            grid-area: article;
+        }
+
+        .gallery {
+            grid-area: gallery;
+            padding-top: 4rem;
+            display: grid;
+            grid-template-columns: auto;
+        }
+        .gallery > * {
+            grid-column: 1 / 3;
+        }
+    }
+}
+@media (max-width:900px) {
+    .nav_desktop li {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+main > article {
+    padding: 4rem 2.5rem;
+}
+
+h1 {
+    margin-bottom: 0.75em;
+    font-size: 2rem;
+    position: relative;
+    color: #563672;
+}
+h1::after {
+    content: "";
+    position: absolute;
+    left: -10px;width: 150px;height: 5px;bottom: -5px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #563672;
+}
+
+article > p {
+    line-height: 125%;
+    text-align: justify;
+    text-align-last: center;
+    color: rgb(23,23,23);
+}
+@media (min-width:770px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+.gallery {
+    width: 100%;
+}
+.gallery > h1 {
+    margin-left: 2.5rem; 
+}
+.gallery > figure {
+    width: 100%;
+}
+.gallery > figure > img {
+    width: 100%;
+    display: block;
+}
+
+
+footer {
+    width: 100%;
+    display: block;
+}
+
+footer > ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2.5rem 0;
+    flex-wrap: wrap;
+}
+footer > ul > li {
+    display: block;
+    padding: 0.3em 0.75em;
+}
+footer > ul a {
+    text-align: center;
+    text-transform: none;
+    color: rgb(23,23,23);
+    white-space: nowrap;
+}
+footer > a {
+    display: block;
+}
+.author {
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    display: inline-block;
+    background-color: rgba(23,23,23);
+}

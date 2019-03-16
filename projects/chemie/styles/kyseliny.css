@@ -1,0 +1,423 @@
+.kys-header {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.kys-header .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "h1 acid";
+}
+
+.kys-header .wrapper h1 {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h1;
+  font-size: 3em;
+}
+
+.kys-header .wrapper h1 span:last-child {
+  font-size: .5em;
+  font-weight: 600;
+}
+
+.kys-header .wrapper figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: acid;
+  position: relative;
+}
+
+.kyseliny {
+  min-height: 100vh;
+}
+
+.kyseliny .wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.kyseliny .wrapper .kyseliny-seznam {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 10px;
+  overflow: scroll;
+}
+
+.kyseliny .wrapper .kyseliny-seznam li {
+  text-align: center;
+  position: relative;
+  padding: .75em 0;
+  cursor: pointer;
+}
+
+.kyseliny .wrapper .kyseliny-seznam li span {
+  padding: 1em 1.75em;
+  display: block;
+  margin: auto;
+  background-color: #18202e;
+  color: #d5e7e7;
+  text-transform: uppercase;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.kyseliny .wrapper .kyseliny-seznam li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: transparent .75em solid;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  border-top-color: #18202e;
+}
+
+.kyseliny .wrapper .kyseliny-seznam li.active span {
+  background-color: #d66829;
+  color: #18202e;
+}
+
+.kyseliny .wrapper .kyseliny-seznam li.active::before {
+  border-top-color: #d66829;
+  -webkit-transform: translateX(-50%) translateY(0.75em);
+          transform: translateX(-50%) translateY(0.75em);
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni {
+  overflow-x: hidden;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper {
+  color: #d5e7e7;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0;
+  width: 600%;
+  background-color: #18202e;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina {
+  padding: 2em 10em;
+  padding-bottom: 5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+  grid-column-gap: 2em;
+  grid-row-gap: 3em;
+  place-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: "nadpis nadpis" "vlastnosti imgvzor" "gallery gallery";
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-nadpis {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nadpis;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-nadpis .kyselina-sumarniVzorec {
+  text-align: center;
+  display: block;
+  margin-top: -1.5em;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vlastnosti {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: vlastnosti;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vlastnosti h3 {
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vlastnosti span {
+  display: block;
+  margin-top: .5em;
+  padding-left: 1.25em;
+  white-space: wrap;
+  position: relative;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vlastnosti span::before {
+  content: "";
+  position: absolute;
+  border-right: #d5e7e7 0.25em solid;
+  height: 60%;
+  min-height: 1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vzorec {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: imgvzor;
+  min-width: 100%;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vzorec img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  margin: auto;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-gallery {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: gallery;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-gallery figure {
+  max-width: 100%;
+}
+
+.kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-gallery figure img {
+  max-width: 100%;
+}
+
+.kyseliny-spolecne {
+  min-height: 100vh;
+}
+
+.kyseliny-spolecne span {
+  padding: 1.5em 2em;
+  font-size: 1.2em;
+  background-color: #18202e;
+  color: #d5e7e7;
+  margin: .5em 0;
+  text-align: center;
+}
+
+.kyseliny-zdroje {
+  min-height: 75vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.kyseliny-zdroje h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+.kyseliny-zdroje ul.internet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 500px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kyseliny-zdroje ul.internet li {
+  margin: .5em .25em;
+}
+
+.kyseliny-zdroje ul.internet li a {
+  padding: .75em 1.25em;
+  background-color: #18202e;
+  color: #d5e7e7;
+  text-align: center;
+}
+
+.kyseliny-zdroje ul.literatura {
+  display: -ms-grid;
+  display: grid;
+}
+
+.kyseliny-zdroje ul.literatura li {
+  margin: .5em .25em;
+}
+
+.kyseliny-zdroje ul.literatura li a {
+  padding: .75em 1.25em;
+  background-color: #18202e;
+  color: #d5e7e7;
+  text-align: center;
+}
+
+.kyseliny-zdroje ul.literatura li a span {
+  display: block;
+}
+
+.main-footer span {
+  text-align: center;
+  padding: .5em 1.25em;
+  margin-bottom: .75em;
+}
+
+.main-footer a {
+  text-align: center;
+  line-height: 24px;
+  margin: 8px;
+}
+
+@media (min-width: 1000px) {
+  .kys-header {
+    font-size: 1.15em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .kys-header {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .kys-header {
+    min-height: 100vh;
+  }
+  .kys-header .wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto minmax(50vh, 100%);
+        grid-template-rows: auto minmax(50vh, 100%);
+        grid-template-areas: "h1" "acid";
+  }
+  .kys-header .wrapper h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: h1;
+  }
+  .kys-header .wrapper figure {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: acid;
+  }
+  .kyseliny .wrapper .kyseliny-seznam {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina {
+    padding: 2em 5em;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "nadpis" "imgvzor" "vlastnosti" "gallery";
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-nadpis {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: nadpis;
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vlastnosti {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: vlastnosti;
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vzorec {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: imgvzor;
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-vzorec img {
+    max-height: 40vh;
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-gallery {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: gallery;
+    max-width: 500px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .kys-header {
+    min-height: 100vh;
+  }
+  .kys-header .wrapper h1 {
+    font-size: 2.25em;
+  }
+  .kys-header .wrapper figure .acid {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 420px) {
+  .kys-header {
+    min-height: 100vh;
+  }
+  .kys-header .wrapper h1 {
+    font-size: 1.75em;
+  }
+  .kys-header .wrapper figure {
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    position: relative;
+  }
+  .kys-header .wrapper figure .acid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+  .kyseliny .wrapper .kyseliny-zobrazeni .wrapper .kyselina .kyselina-gallery {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: gallery;
+    max-width: 500px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+/*# sourceMappingURL=kyseliny.css.map */

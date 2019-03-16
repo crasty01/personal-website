@@ -1,0 +1,22 @@
+.all {
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#canvas {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+/*# sourceMappingURL=main.css.map */

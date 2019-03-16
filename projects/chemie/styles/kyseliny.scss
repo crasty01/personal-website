@@ -1,0 +1,439 @@
+$dark: #18202e;
+$accent: #d66829;
+$light: #d5e7e7;
+$white: #f5f5f5;
+
+
+
+
+
+.kys-header {
+    min-height: 100vh;
+    width: 100%;
+
+    & .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "h1 acid"
+        ;
+
+        & h1 {
+            display: grid;
+            place-content: center;
+            grid-area: h1;
+            font-size: 3em;
+
+            & span {
+                &:last-child {
+                    font-size: .5em;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        & figure {
+            grid-area: acid;
+            position: relative;
+        }
+    }
+}
+
+
+.kyseliny {
+    min-height: 100vh;
+
+    & .wrapper {
+        display: grid;
+        grid-gap: 10px;
+
+        & .kyseliny-seznam {
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            justify-items: center;
+            justify-content: center;
+            grid-gap: 10px;
+            overflow: scroll;
+
+            li {
+                text-align: center;
+                position: relative;
+                padding: .75em 0;
+                cursor: pointer;
+
+                & span {
+                    padding: 1em 1.75em;
+                    display: block;
+                    margin: auto;
+                    background-color: $dark;
+                    color: $light;
+                    text-transform: uppercase;
+                    transition: 250ms ease-in-out;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border: transparent .75em solid;
+                    transition: 250ms ease-in-out;
+                    border-top-color: $dark;
+                }
+                &.active {
+                    & span {
+                        background-color: $accent;
+                        color: $dark;
+                    }
+                    &::before {
+                        border-top-color: $accent;
+                        transform: translateX(-50%) translateY(.75em);
+                    }
+                }
+            }
+        }
+
+        & .kyseliny-zobrazeni {
+            overflow-x: hidden;
+
+            & .wrapper {
+                color: $light;
+                display: grid;
+                grid-gap: 0;
+                width: 600%;
+                background-color: $dark;
+                grid-template-columns: repeat(6, 1fr);
+
+                & .kyselina {
+                    padding: 2em 10em;
+                    padding-bottom: 5em;
+                    box-sizing: border-box;
+                    align-items: center;
+                    display: grid;
+                    align-self: center;
+                    grid-column-gap: 2em;
+                    grid-row-gap: 3em;
+                    place-content: center;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto 1fr auto;
+                    grid-template-areas:
+                        "nadpis nadpis"
+                        "vlastnosti imgvzor"
+                        "gallery gallery"
+                    ;
+
+                    & .kyselina-nadpis {
+                        grid-area: nadpis;
+
+                        & .kyselina-sumarniVzorec {
+                            text-align: center;
+                            display: block;
+                            margin-top: -1.5em;
+                        }
+                    }
+
+                    & .kyselina-vlastnosti {
+                        grid-area: vlastnosti;
+
+                        & h3 {
+                            text-transform: uppercase;
+                            margin-top: 1em;
+                        }
+
+                        & span {
+                            display: block;
+                            margin-top: .5em;
+                            padding-left: 1.25em;
+                            white-space: wrap;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                border-right: $light .25em solid;
+                                height: 60%;
+                                min-height: 1em;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    & .kyselina-vzorec {
+                        grid-area: imgvzor;
+                        min-width: 100%;
+
+                        & img {
+                            object-fit: contain;
+                            max-width: 100%;
+                            margin: auto;
+                        }
+                    }
+
+                    & .kyselina-gallery {
+                        grid-area: gallery;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        justify-content: stretch;
+                        grid-gap: 10px;
+                        justify-items: center;
+
+                        & figure {
+                            max-width: 100%;
+
+                            & img {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.kyseliny-spolecne {
+    min-height: 100vh;
+
+    & span {
+        padding: 1.5em 2em;
+        font-size: 1.2em;
+        background-color: $dark;
+        color: $light;
+        margin: .5em 0;
+        text-align: center;
+    }
+}
+
+.kyseliny-zdroje {
+    min-height: 75vh;
+    display: grid;
+    place-content: center;
+
+    & h3 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2em;
+    }
+
+    & ul.internet {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        justify-content: space-between;
+
+        & li {
+            margin: .5em .25em;
+
+            & a {
+                padding: .75em 1.25em;
+                background-color: $dark;
+                color: $light;
+                text-align: center;
+            }
+        }
+    }
+
+    & ul.literatura {
+        display: grid;
+
+        & li {
+            margin: .5em .25em;
+
+            & a {
+                padding: .75em 1.25em;
+                background-color: $dark;
+                color: $light;
+                text-align: center;
+
+                & span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.main-footer {
+    & span {
+        text-align: center;
+        padding: .5em 1.25em;
+        margin-bottom: .75em;
+    }
+
+    & a {
+        text-align: center;
+        line-height: 24px;
+        margin: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1000px) {
+    .kys-header {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .kys-header {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .kys-header {
+        min-height: 100vh;
+
+        & .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto minmax(50vh, 100%);
+            grid-template-areas:
+                "h1"
+                "acid"
+            ;
+
+            & h1 {
+                grid-area: h1;
+            }
+
+            & figure {
+                grid-area: acid;
+            }
+        }
+    }
+
+    .kyseliny {
+        & .wrapper {
+            & .kyseliny-seznam {
+                justify-content: flex-start;
+            }
+
+            & .kyseliny-zobrazeni {
+                & .wrapper {
+                    & .kyselina {
+                        padding: 2em 5em;
+                        grid-template-columns: 1fr;
+                        grid-template-areas:
+                            "nadpis"
+                            "imgvzor"
+                            "vlastnosti"
+                            "gallery"
+                        ;
+
+                        & .kyselina-nadpis {
+                            grid-area: nadpis
+                        }
+
+                        & .kyselina-vlastnosti {
+                            grid-area: vlastnosti
+                        }
+
+                        & .kyselina-vzorec {
+                            grid-area: imgvzor;
+
+                            & img {
+                                max-height: 40vh;
+                            }
+                        }
+
+                        & .kyselina-gallery {
+                            grid-area: gallery;
+                            max-width: 500px;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .kys-header {
+        min-height: 100vh;
+
+        & .wrapper {
+            & h1 {
+                font-size: 2.25em;
+            }
+
+            & figure {
+                & .acid {
+                    transform: scale(.75)
+                }
+            }
+        }
+    }
+
+    .kyseliny {
+        & .wrapper {
+            & .kyseliny-zobrazeni {
+                & .wrapper {
+                    & .kyselina {
+                        padding: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .kys-header {
+        min-height: 100vh;
+
+        & .wrapper {
+            & h1 {
+                font-size: 1.75em;
+            }
+
+            & figure {
+                justify-self: stretch;
+                align-self: stretch;
+                position: relative;
+
+                & .acid {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(.5);
+                }
+            }
+        }
+    }
+
+    .kyseliny {
+        & .wrapper {
+            & .kyseliny-zobrazeni {
+                & .wrapper {
+                    & .kyselina {
+                        & .kyselina-gallery {
+                            grid-area: gallery;
+                            max-width: 500px;
+                            grid-template-columns: 1fr;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
