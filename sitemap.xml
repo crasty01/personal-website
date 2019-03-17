@@ -8,26 +8,31 @@
   <loc>https://danielvondra.tk/</loc>
   <lastmod>2019-03-17T14:05:53+00:00</lastmod>
   <priority>1.00</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://danielvondra.tk/home/</loc>
   <lastmod>2019-03-17T14:05:53+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://danielvondra.tk/projects/</loc>
   <lastmod>2019-03-17T14:05:53+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://danielvondra.tk/about/</loc>
   <lastmod>2019-03-17T14:05:53+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://danielvondra.tk/contact/</loc>
   <lastmod>2019-03-17T14:05:53+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://danielvondra.tk/projects/foceni-modelky-v-liberci/</loc>
