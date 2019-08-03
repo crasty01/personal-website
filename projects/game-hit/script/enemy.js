@@ -39,10 +39,19 @@ function Enemy(e) {
   }
 
   this.show = function () {
-    noStroke();
-    fill(orange);
-    rectMode(CENTER);
-    rect(this.pos.x, this.pos.y, this.w + 5, this.w + 5);
+    if (cheats) {
+      imageMode(CENTER)
+      if (this.w > 35) {
+        image(skinL, this.pos.x, this.pos.y, this.w + 5, this.w + 5)
+      } else {
+        image(skinS, this.pos.x, this.pos.y, this.w + 5, this.w + 5)
+      }
+    } else {
+      noStroke();
+      fill(orange);
+      rectMode(CENTER);
+      rect(this.pos.x, this.pos.y, this.w + 5, this.w + 5);
+    }
   }
 
   this.hits = function (anotherObject) {
@@ -63,7 +72,7 @@ function Enemy(e) {
     }
 
     if (0 < this.pos.x < width && 0 < this.pos.y < height) {
-      console.log("kill");
+      //.log("kill");
       score++;
       levelUp++;
     }

@@ -1,18 +1,26 @@
-var p,
+let maxScore;
+checkCookie()
+console.log('try cheat_for_Marria()')
+
+
+let p,
   e = [],
   speed = 10,
   score = 0,
-  maxScore = 0,
   level = 1,
   levelUp = 0,
   endGame = true,
   orange = [214, 104, 41],
   dark = [24, 32, 46],
-  white = [245, 245, 245];
+  white = [245, 245, 245],
+  skinL,
+  cheats = false;
 
 function preload() {
   font = loadFont('./style/blockFont.ttf');
   roboto = loadFont('./style/Roboto-Black.ttf');
+  skinL = loadImage('./skin_l.jpg')
+  skinS = loadImage('./skin_s.png')
 }
 
 function setup() {
@@ -32,7 +40,7 @@ function draw() {
     e[e.length - 1].spawn();
     levelUp = 0;
     level++;
-    console.log(level + ' => ' + e.lenght + ' nepřátel v aréně')
+    console.log(level + ' => ' + e.length + ' nepřátel v aréně')
   }
   for (let i = 0; i < e.length; i++) {
     e[i].show();
@@ -57,6 +65,7 @@ function draw() {
   if (endGame) {
     if (score > maxScore) {
       maxScore = score;
+      setCookie("score", maxScore, 100000);
     }
 
     push()
