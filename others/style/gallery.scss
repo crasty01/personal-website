@@ -10,6 +10,7 @@ $white: #f5f5f5;
 
     .wrapper {
         display: grid;
+        grid-gap: .5em;
         width: 100%;
 
         .project {
