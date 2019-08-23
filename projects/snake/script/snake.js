@@ -23,10 +23,8 @@ function Snake() {
         this.pos.y += this.motion.yVal * grid;
         this.kontrolaPozice()
         this.biteMyself()
-        for (let i = 0; i < berries.length; i++) {
-            if (berries[i].pos.x == this.pos.x && berries[i].pos.y == this.pos.y) {
-                this.eatFood(i)
-            }
+        if (berry.pos.x == this.pos.x && berry.pos.y == this.pos.y) {
+            this.eatFood(i)
         }
     }
 
