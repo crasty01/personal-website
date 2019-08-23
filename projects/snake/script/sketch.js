@@ -13,6 +13,7 @@ function preload() {
 function setup() {
   createCanvas(640, 640).parent("canvas");
   berry = new Berry;
+  berry.create()
   s = new Snake;
   frameRate(12)
 }
