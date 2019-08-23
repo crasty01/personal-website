@@ -2,7 +2,7 @@ let s, font;
 let grid = 16,
   speedX = 0,
   addBerry = 0,
-  berries = [],
+  berry,
   speedY = 0,
   lineGrid = false;
 
@@ -12,6 +12,7 @@ function preload() {
 
 function setup() {
   createCanvas(640, 640).parent("canvas");
+  berry = new Berry;
   s = new Snake;
   frameRate(12)
 }
@@ -23,14 +24,12 @@ function draw() {
   }
   s.show();
   s.update();
-  if (addBerry % 7 == 0 || (berries.length / 7) < (s.tail.length / 7) && berries.length < 10) {
-    berries.push(new Berry);
-    berries[berries.length - 1].create()
-    addBerry++
-  }
-  berries.forEach(berry => {
-    berry.show()
-  });
+  //if (addBerry % 7 == 0 || (berries.length / 7) < (s.tail.length / 7) && berries.length < 10) {
+  //  berries.push(new Berry);
+  //  berries[berries.length - 1].create()
+  //  addBerry++
+  //}
+  berry.show()
 
   textSize(64);
   textFont(font)
