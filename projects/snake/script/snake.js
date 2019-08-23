@@ -24,7 +24,7 @@ function Snake() {
         this.kontrolaPozice()
         this.biteMyself()
         if (berry.pos.x == this.pos.x && berry.pos.y == this.pos.y) {
-            this.eatFood(i)
+            this.eatFood()
         }
     }
 
@@ -45,8 +45,8 @@ function Snake() {
         }
     }
 
-    this.eatFood = function (i) {
-        berries[i].create();
+    this.eatFood = function () {
+        berry.create();
         this.tail.push({
             x: this.pos.x,
             y: this.pos.y
