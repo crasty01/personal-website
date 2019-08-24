@@ -75,7 +75,7 @@ function Snake() {
         }
     }
 
-    this.kontrolaPozice = function () {
+    this.kontrolaPozice = function () { //this.pos.x = this.pos.x % width;  => dont work!!
         if (this.pos.x >= width) {
             this.pos.x = 0;
         } else if (this.pos.x < 0) {
