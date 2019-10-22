@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SLIDER</title>    
-    
-    
+    <title>SLIDER</title>
+
+
     <!--GOOGLE ANALYTICS (gtag.js)-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-136773212-1');
     </script>
-    
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../others/style/main.css">
+    <link rel="stylesheet" href="../../others/style/header.css">
+    <link rel="stylesheet" href="../../others/style/footer.css">
+
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <div class="all">
-        <div class="wrapper">
-            <div class="slider">
-                <img id="sliderImage" class="sliderImage">
-                <img id="sliderImageNext" class="sliderImage next">
+        <header class="main-header">
+            <nav class="nav">
+                <figure class="logo">
+                    <a href="../../../">
+                        <svg viewBox="0 0 570 570">
+                            <g>
+                                <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
+                                <path
+                                    d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+                            </g>
+                        </svg>
+                    </a>
+                </figure>
+                <ul>
+                    <li><a href="../../projects/">projekty</a></li>
+                    <li><a href="../../about/">o mně</a></li>
+                    <li><a href="../../contact/">kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="wrapper">
+                <div class="slider">
+                    <img id="sliderImage" class="sliderImage">
+                    <img id="sliderImageNext" class="sliderImage next">
+                </div>
+                <div id="btn-backward" class="button btn-backward"></div>
+                <div id="btn-forward" class="button btn-forward"></div>
+                <div id="sliderTime" class="sliderTime active"></div>
             </div>
-            <div id="btn-backward" class="button btn-backward"></div>
-            <div id="btn-forward" class="button btn-forward"></div>
-            <div id="sliderTime" class="sliderTime active"></div>
-        </div>
+        </main>
+        <footer class="main-footer">
+            <a href="https://danielvondra.tk/">&copy; Daniel Vondra 2018</a>
+        </footer>
     </div>
 
     <script src="./scripts/main.js"></script>
     <script src="./scripts/timer.js"></script>
 </body>
+
 </html>

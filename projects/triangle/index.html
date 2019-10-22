@@ -1,43 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TRIANGLE</title>    
-    
-    
+    <title>TRIANGLE</title>
+
+
     <!--GOOGLE ANALYTICS (gtag.js)-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-136773212-1');
     </script>
-    
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../others/style/main.css">
+    <link rel="stylesheet" href="../../others/style/header.css">
+    <link rel="stylesheet" href="../../others/style/footer.css">
+
 
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body onload="setup()">
     <div class="all">
-        <div class="nums">
-            <input id="numA" type="number" value="30" placeholder="a">
-            <input id="numB" type="number" value="40" placeholder="b">
-            <input id="numC" type="number" value="50" placeholder="c">
-        </div>
-        <canvas id="canvas" height='500' width='500'></canvas>
-        <div id="error" class="disabled">
-            - nelze sestrojit -
-            <span>prosím, změnte hodnoty</span>        
-        </div>
-        <div class="setSize">
-            <div class="getBigger" onclick="getBigger()">get bigger</div>
-            <div class="getSmaller" onclick="getSmaller()">get smaller</div>
-        </div>
+        <header class="main-header">
+            <nav class="nav">
+                <figure class="logo">
+                    <a href="../../../">
+                        <svg viewBox="0 0 570 570">
+                            <g>
+                                <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
+                                <path
+                                    d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+                            </g>
+                        </svg>
+                    </a>
+                </figure>
+                <ul>
+                    <li><a href="../../projects/">projekty</a></li>
+                    <li><a href="../../about/">o mně</a></li>
+                    <li><a href="../../contact/">kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="nums">
+                <input id="numA" type="number" value="30" placeholder="a">
+                <input id="numB" type="number" value="40" placeholder="b">
+                <input id="numC" type="number" value="50" placeholder="c">
+            </div>
+            <canvas id="canvas" height='500' width='500'></canvas>
+            <div id="error" class="disabled">
+                - nelze sestrojit -
+                <span>prosím, změnte hodnoty</span>
+            </div>
+            <div class="setSize">
+                <div class="getBigger" onclick="getBigger()">get bigger</div>
+                <div class="getSmaller" onclick="getSmaller()">get smaller</div>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <a href="https://danielvondra.tk/">&copy; Daniel Vondra 2018</a>
+        </footer>
     </div>
 
     <script src="./js/main.js"></script>

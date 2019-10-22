@@ -27,15 +27,27 @@
     <meta property="og:description" content="Web design, developer, and much more.">
     <meta property="og:url" content="https://www.pslib.cz/daniel.vondra">
     <meta property="og:image" content="https://www.pslib.cz/daniel.vondra/web/others/images/index/og-image.jpg">
-    
-    <!--GOOGLE ANALYTICS (gtag.js)-->
+
+
+    <!--GOOGLE ANALYTICS & ADSENCE-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-136773212-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4437400918068553",
+            enable_page_level_ads: true
+        });
     </script>
 
 
@@ -49,11 +61,117 @@
 
     <link rel="stylesheet" href="./others/style/home.css">
 
-    
-    <meta http-equiv="refresh" content="0;url=./home/">
 </head>
 
 <body>
+    <div class="all">
+        <header class="main-header">
+            <nav class="nav">
+                <figure class="logo">
+                    <a href="./">
+                        <svg viewBox="0 0 570 570">
+                            <g>
+                                <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
+                                <path
+                                    d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+                            </g>
+                        </svg>
+                    </a>
+                </figure>
+                <ul>
+                    <li><a href="./projects/">projekty</a></li>
+                    <li><a href="./about/">o mně</a></li>
+                    <li><a href="./contact/">kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="about-me">
+                <div class="wrapper">
+                    <h2>trochu o mně</h2>
+                    <div class="about-me--text">
+                        <p>
+                            Ahoj, já jsem Daniel Vondra.<br>
+                            Věnuji se tvorbě webů, focení a upravování fotek.
+                            Mám rád hry, hudbu, filmy.
+                            Také rád kreslím a čtu knížky, především fantasy.
+                        </p>
+                    </div>
+                    <a href="./about/" class="button">
+                        <span>řekni mi více</span>
+                        <div class="btn--pop-up"></div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <h2>nejlepší projekty</h2>
+                <div class="wrapper">
+                    <a class="project" href="./projects/perlex/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/perlex.jpg"
+                                alt="web pro firmu perlex v jablonci nad nisou">
+                            <figcaption class="description">
+                                design webu pro firmu perlex
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="project" href="./projects/svg-animace/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/svg-animace.jpg"
+                                alt="svg načítací animace, využití smil">
+                            <figcaption class="description">
+                                loading animace
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="project" href="https://soulluxe.com/">
+                        <figure>
+                            <img class="img" src="./others/images/gallery/soulluxe.jpg"
+                                alt="oficiální web firmy soulluxe">
+                            <figcaption class="description">
+                                oficiální web firmy soulluxe
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="project" href="./projects/game-hit/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/game-hit.jpg" alt="game-hit">
+                            <figcaption class="description">
+                                game hit
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <a href="./projects/" class="button dark">
+                    <span>Chci vidět víc</span>
+                    <div class="btn--pop-up"></div>
+                </a>
+            </section>
+
+            <section class="contact-me">
+                <h2>kontakt</h2>
+                <div class="wrapper">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vondrad.work@gmail.com"
+                        class="button donotanimate">
+                        <span>vondrad.work@gmail.com</span>
+                        <div class="btn--pop-up"></div>
+                    </a>
+                    <a href="https://codepen.io/crasty01" class="button donotanimate">
+                        <span>codepen.io/crasty01</span>
+                        <div class="btn--pop-up"></div>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="main-footer">
+            <a href="https://danielvondra.tk/home/">&copy; Daniel Vondra 2018</a>
+        </footer>
+    </div>
 </body>
 
 </html>

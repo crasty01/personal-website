@@ -26,19 +26,22 @@
     <meta property="og:title" content="Daniel Vondra">
     <meta property="og:description" content="Web design, developer, and much more.">
     <meta property="og:url" content="https://www.pslib.cz/daniel.vondra">
-    <meta property="og:image" content="https://www.pslib.cz/daniel.vondra/web/others/images/index/og-image.jpg">   
-    
-    
+    <meta property="og:image" content="https://www.pslib.cz/daniel.vondra/web/others/images/index/og-image.jpg">
+
+
     <!--GOOGLE ANALYTICS & ADSENCE-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-136773212-1');
     </script>
-    
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
@@ -46,7 +49,7 @@
             enable_page_level_ads: true
         });
     </script>
-    
+
 
     <!--CSS-->
     <link rel="stylesheet" href="../others/style/main.css">
@@ -61,11 +64,12 @@
         <header class="main-header">
             <nav class="nav">
                 <figure class="logo">
-                    <a href="../home/">
+                    <a href="../../">
                         <svg viewBox="0 0 570 570">
                             <g>
                                 <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
-                                <path d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+                                <path
+                                    d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
                             </g>
                         </svg>
                     </a>
@@ -81,9 +85,20 @@
             <section class="gallery">
                 <h2>všechny projekty</h2>
                 <div class="wrapper">
+                    <a class="project" href="../projects/perlex/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/perlex.jpg"
+                                alt="web pro firmu perlex v jablonci nad nisou">
+                            <figcaption class="description">
+                                design webu pro firmu perlex
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
                     <a class="project" href="https://www.tachografyliberec.cz/">
                         <figure>
-                            <img class="img" src="../others/images/gallery/tachografy.jpg" alt="design webové stránky pro firmu Tachografy Liberec">
+                            <img class="img" src="../others/images/gallery/tachografy.jpg"
+                                alt="design webové stránky pro firmu Tachografy Liberec">
                             <figcaption class="description">
                                 design webu - Tachografy Liberec
                                 <div class="arrow"></div>
@@ -95,6 +110,25 @@
                             <img class="img" src="../others/images/gallery/snake.jpg" alt="kámen nůžky papír">
                             <figcaption class="description">
                                 hra snake
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="project" href="../projects/svg-animace/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/svg-animace.jpg"
+                                alt="svg načítací animace, využití smil">
+                            <figcaption class="description">
+                                loading animace
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="project" href="../projects/parallax/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/parallax.jpg" alt="parallax stránka">
+                            <figcaption class="description">
+                                scroll-triggered animation
                                 <div class="arrow"></div>
                             </figcaption>
                         </figure>
@@ -126,6 +160,15 @@
                             </figcaption>
                         </figure>
                     </a>
+                    <a class="project" href="../projects/mineseeker/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/mineseeker.jpg" alt="hledání min">
+                            <figcaption class="description">
+                                mineseeker - hledání min
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
                     <a class="project" href="../projects/pexeso/">
                         <figure>
                             <img class="img" src="../others/images/gallery/pexeso.jpg" alt="lightBox using javascript">
@@ -144,15 +187,6 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a class="project" href="../projects/lightBox/">
-                        <figure>
-                            <img class="img" src="../others/images/gallery/lightbox.jpg" alt="lightBox using javascript">
-                            <figcaption class="description">
-                                lightBox pomocí javascriptu
-                                <div class="arrow"></div>
-                            </figcaption>
-                        </figure>
-                    </a>
                     <a class="project" href="../projects/slider/">
                         <figure>
                             <img class="img" src="../others/images/gallery/slider.jpg" alt="Javascript Slideshow">
@@ -164,7 +198,8 @@
                     </a>
                     <a class="project" href="https://soulluxe.com/">
                         <figure>
-                            <img class="img" src="../others/images/gallery/soulluxe.jpg" alt="oficiální web firmy soulluxe">
+                            <img class="img" src="../others/images/gallery/soulluxe.jpg"
+                                alt="oficiální web firmy soulluxe">
                             <figcaption class="description">
                                 oficiální web firmy soulluxe
                                 <div class="arrow"></div>
@@ -191,9 +226,19 @@
                     </a>
                     <a class="project" href="../projects/foceni-modelky-v-liberci/">
                         <figure>
-                            <img class="img" src="../others/images/gallery/modelka_mid.jpg" alt="Focení modelky v Liberci">
+                            <img class="img" src="../others/images/gallery/modelka_mid.jpg"
+                                alt="Focení modelky v Liberci">
                             <figcaption class="description">
                                 Focení modelky v Liberci
+                                <div class="arrow"></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a class="project" href="../projects/imaginarni-firma/">
+                        <figure>
+                            <img class="img" src="../others/images/gallery/imaginarni-firma.jpg" alt="Imaginarni firma">
+                            <figcaption class="description">
+                                web imaginarni firmy
                                 <div class="arrow"></div>
                             </figcaption>
                         </figure>
@@ -202,7 +247,7 @@
             </section>
         </main>
         <footer class="main-footer">
-            <a href="https://danielvondra.tk/home/">&copy; Daniel Vondra 2018</a>
+            <a href="https://danielvondra.tk/">&copy; Daniel Vondra 2018</a>
         </footer>
     </div>
 </body>

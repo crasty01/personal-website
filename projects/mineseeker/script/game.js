@@ -13,7 +13,7 @@ function preload() {
 }
 */
 function setup() {
-  createCanvas(constrain(windowWidth, 100, 900), constrain(windowHeight, 100, 900)).parent(document.querySelector('#canvas'));
+  createCanvas(constrain(document.getElementById("canvas").offsetWidth, 100, 750), constrain(windowHeight, 100, 750)).parent(document.querySelector('#canvas'));
   document.querySelector('canvas').setAttribute('oncontextmenu', "return false;");
   start();
 }

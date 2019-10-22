@@ -1,0 +1,25 @@
+.svg-wrapper {
+  background-color: #DB7769;
+}
+
+.svg-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-areas: ". svg-1 svg-2 .";
+  gap: 3em;
+  color: #f5f5f5;
+
+  & .svg {
+    display: grid;
+    place-items: center;
+    padding: 2em 0;
+
+    &:nth-child(1) {
+      grid-area: svg-1;
+    }
+
+    &:nth-child(2) {
+      grid-area: svg-2;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.svg-wrapper {
+  background-color: #DB7769;
+}
+
+.svg-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto auto 1fr;
+      grid-template-columns: 1fr auto auto 1fr;
+      grid-template-areas: ". svg-1 svg-2 .";
+  gap: 3em;
+  color: #f5f5f5;
+}
+
+.svg-wrapper .svg {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 2em 0;
+}
+
+.svg-wrapper .svg:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: svg-1;
+}
+
+.svg-wrapper .svg:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: svg-2;
+}
+/*# sourceMappingURL=style.css.map */

@@ -5,30 +5,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>    
-    
-    
-    <!--GOOGLE ANALYTICS (gtag.js)-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <title>Document</title>
 
-        gtag('config', 'UA-136773212-1');
-    </script>
-    
 
-  <link rel="stylesheet" href="https://pslib.cz/daniel.vondra/web/others/style/main.css">
+  <!--GOOGLE ANALYTICS (gtag.js)-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136773212-1');
+  </script>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="../../others/style/main.css">
+  <link rel="stylesheet" href="../../others/style/header.css">
+  <link rel="stylesheet" href="../../others/style/footer.css">
+
+
   <link rel="stylesheet" href="./others/style/main.css">
   <script src="./others/script/main.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="all">
-    <main>
+    <header class="main-header">
+      <nav class="nav">
+        <figure class="logo">
+          <a href="../../../">
+            <svg viewBox="0 0 570 570">
+              <g>
+                <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
+                <path d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+              </g>
+            </svg>
+          </a>
+        </figure>
+        <ul>
+          <li><a href="../../projects/">projekty</a></li>
+          <li><a href="../../about/">o mně</a></li>
+          <li><a href="../../contact/">kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
       <div class="phone">
         <div class="topSide">
           <div class="camera"></div>
@@ -168,8 +194,10 @@
           <div class="speeker"></div>
         </div>
       </div>
-
     </main>
+    <footer class="main-footer">
+      <a href="https://danielvondra.tk/">&copy; Daniel Vondra 2018</a>
+    </footer>
   </div>
 </body>
 

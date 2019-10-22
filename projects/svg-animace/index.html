@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TRIANGLE</title>
+
+
+  <!--GOOGLE ANALYTICS (gtag.js)-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136773212-1');
+  </script>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="../../others/style/main.css">
+  <link rel="stylesheet" href="../../others/style/header.css">
+  <link rel="stylesheet" href="../../others/style/footer.css">
+  <link rel="stylesheet" href="../../others/style/about.css">
+
+
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body onload="setup()">
+  <div class="all only-one">
+    <header class="main-header">
+      <nav class="nav">
+        <figure class="logo">
+          <a href="../../../">
+            <svg viewBox="0 0 570 570">
+              <g>
+                <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
+                <path d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+              </g>
+            </svg>
+          </a>
+        </figure>
+        <ul>
+          <li><a href="../../projects/">projekty</a></li>
+          <li><a href="../../about/">o mně</a></li>
+          <li><a href="../../contact/">kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="about-me">
+        <div class="wrapper">
+          <h2>loading animace</h2>
+          <div class="about-me--text">
+            <p>
+              Rozanimování svg grafiky použitím technologie smil.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="svg-wrapper">
+        <div class="svg verze-1">
+          <h3>verze 01</h3>
+          <svg width="100" height="100" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="-50,50 50,50 50,-50 -50,-50" style="fill:#DB7769" />
+            <g>
+              <polygon points="0,0 -30,-40 30,-40" style="fill:whitesmoke">
+                <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="0" dur="4s"
+                  repeatCount="indefinite" values="1;0;0" keyTimes="0;0.9;1" />
+              </polygon>
+              <g>
+                <polygon points="0,0 30,40 -30,40" style="fill:whitesmoke">
+                  <animateTransform attributeName="transform" attributeType="XML" type="scale" from="0" to="1" dur="4s"
+                    repeatCount="indefinite" values="0;1;1" keyTimes="0;0.9;1" />
+                </polygon>
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 40" to="0 0"
+                  dur="4s" repeatCount="indefinite" values="0 40;0 0;0 0" keyTimes="0;0.9;1" />
+              </g>
+              <line x1="0" y1="0" x2="0" y2="39" stroke="whitesmoke" stroke-width="2" stroke-dasharray="0 4"
+                stroke-linecap="round">
+                <animate attributeName="y2" attributeType="XML" from="0" to="39" dur="4s" repeatCount="indefinite"
+                  values="0;35;39" keyTimes="0;0.1;1" />
+                <animate attributeName="stroke-dashoffset" attributeType="XML" from="0" to="-100" dur="4s"
+                  repeatCount="indefinite" values="0;-100" keyTimes="0;1" />
+              </line>
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="180" dur="4s"
+                repeatCount="indefinite" values="0;0;180" keyTimes="0;0.9;1" calcMode="spline"
+                keySplines=".8 0 .2 1; .8 0 .2 1" />
+            </g>
+          </svg>
+        </div>
+        <div class="svg verze-2">
+          <h3>verze 02</h3>
+          <svg width="100" height="100" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="-50,50 50,50 50,-50 -50,-50" style="fill:#DB7769" />
+            <g>
+              <polygon points="-30,40 30,40 4,0 30,-40 -30,-40 -4,0" style="fill:#e1968c" />
+
+              <polygon points="0,0 -26,-40 26,-40" style="fill:whitesmoke">
+                <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="0" dur="4s"
+                  repeatCount="indefinite" values="1;0;0" keyTimes="0;0.9;1" />
+              </polygon>
+              <g>
+                <polygon points="0,0 26,40 -26,40" style="fill:whitesmoke">
+                  <animateTransform attributeName="transform" attributeType="XML" type="scale" from="0" to="1" dur="4s"
+                    repeatCount="indefinite" values="0;1;1" keyTimes="0;0.9;1" />
+                </polygon>
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 40" to="0 0"
+                  dur="4s" repeatCount="indefinite" values="0 40;0 0;0 0" keyTimes="0;0.9;1" />
+              </g>
+              <line x1="0" y1="0" x2="0" y2="39" stroke="whitesmoke" stroke-width="2" stroke-dasharray="0 4"
+                stroke-linecap="round">
+                <animate attributeName="y2" attributeType="XML" from="0" to="39" dur="4s" repeatCount="indefinite"
+                  values="0;35;39" keyTimes="0;0.1;1" />
+                <animate attributeName="stroke-dashoffset" attributeType="XML" from="0" to="-100" dur="4s"
+                  repeatCount="indefinite" values="0;-100" keyTimes="0;1" />
+              </line>
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="180" dur="4s"
+                repeatCount="indefinite" values="0;0;180" keyTimes="0;0.9;1" calcMode="spline"
+                keySplines=".8 0 .2 1; .8 0 .2 1" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <a href="https://danielvondra.tk/">&copy; Daniel Vondra 2018</a>
+    </footer>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
