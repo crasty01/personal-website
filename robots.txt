@@ -1,0 +1,11 @@
+# Skupina 1
+User-agent: Googlebot
+Disallow: /googlebot_ne/
+
+
+# Skupina 2
+User-agent: *
+Allow: /
+
+
+Sitemap: http://danielvondra.tk/sitemap.xml
