@@ -71,26 +71,23 @@
                     </a>
                 </figure>
                 <ul>
-                    <li><a  onclick="gtag('event', 'projects', {
-                                        'event_category': 'click_through',
+                    <li><a onclick="gtag('event', 'projects', {
+                                        'event_category': 'menu',
                                         'event_label': 'projects'
-                                        });"
-                            href="./projects/">projekty</a></li>
-                            
-                    <li><a  onclick="gtag('event', 'about', {
-                                        'event_category': 'click_through',
+                                        });" href="./projects/">projekty</a></li>
+
+                    <li><a onclick="gtag('event', 'about', {
+                                        'event_category': 'menu',
                                         'event_label': 'about'
-                                        });"
-                            href="./about/">o mně</a></li>
-                    <li><a  onclick="gtag('event', 'contact', {
-                                        'event_category': 'click_through',
+                                        });" href="./about/">o mně</a></li>
+                    <li><a onclick="gtag('event', 'contact', {
+                                        'event_category': 'menu',
                                         'event_label': 'contact'
-                                        });"
-                            href="./contact/">kontakt</a></li>
+                                        });" href="./contact/">kontakt</a></li>
                 </ul>
             </nav>
         </header>
-        
+
         <main>
             <section class="about-me">
                 <div class="wrapper">
@@ -103,7 +100,10 @@
                             Také rád kreslím a čtu knížky, především fantasy.
                         </p>
                     </div>
-                    <a href="./about/" class="button">
+                    <a onclick="gtag('event', 'more-about', {
+                                        'event_category': 'click_through',
+                                        'event_label': 'more-about'
+                                        });" href="./about/" class="button">
                         <span>řekni mi více</span>
                         <div class="btn--pop-up"></div>
                     </a>
@@ -153,7 +153,10 @@
                         </figure>
                     </a>
                 </div>
-                <a href="./projects/" class="button dark">
+                <a onclick="gtag('event', 'more-projects', {
+                                        'event_category': 'click_through',
+                                        'event_label': 'more-projects'
+                                        });" href="./projects/" class="button dark">
                     <span>Chci vidět víc</span>
                     <div class="btn--pop-up"></div>
                 </a>
