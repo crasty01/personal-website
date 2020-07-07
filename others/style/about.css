@@ -18,6 +18,10 @@
   margin: .1em;
 }
 
+.about-me .wrapper p {
+  padding: .5em 0;
+}
+
 .about-me .wrapper .about-me--stats {
   width: 100%;
 }
