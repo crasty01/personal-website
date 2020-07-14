@@ -58,6 +58,12 @@ $white: #f5f5f5;
             }
         }
 
+        & p a {
+            display: inline;
+            text-transform: none;
+            color: white;
+        }
+
         & .button:last-of-type {
             margin-bottom: 0;
         }
