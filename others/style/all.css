@@ -46,6 +46,10 @@ img {
   text-transform: uppercase;
 }
 
+img {
+  max-width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -282,12 +286,20 @@ section.project .wrapper .button {
   padding: 0 2em;
 }
 
-.about-me .wrapper .about-me--text {
+.about-me .wrapper > div {
   white-space: normal;
   font-weight: 300;
   text-align: center;
   padding: .25em;
   margin: .1em;
+}
+
+.about-me .wrapper p {
+  padding: .5em 0;
+}
+
+.about-me .wrapper img {
+  margin: 1em 0;
 }
 
 .about-me .wrapper .about-me--stats {
@@ -319,7 +331,7 @@ section.project .wrapper .button {
   color: transparent;
 }
 
-.about-me .wrapper .button {
+.about-me .wrapper .button:last-of-type {
   margin-bottom: 0;
 }
 

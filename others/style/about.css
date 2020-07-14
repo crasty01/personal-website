@@ -10,7 +10,7 @@
   padding: 0 2em;
 }
 
-.about-me .wrapper .about-me--text {
+.about-me .wrapper > div {
   white-space: normal;
   font-weight: 300;
   text-align: center;
@@ -20,6 +20,10 @@
 
 .about-me .wrapper p {
   padding: .5em 0;
+}
+
+.about-me .wrapper img {
+  margin: 1em 0;
 }
 
 .about-me .wrapper .about-me--stats {
@@ -51,7 +55,7 @@
   color: transparent;
 }
 
-.about-me .wrapper .button {
+.about-me .wrapper .button:last-of-type {
   margin-bottom: 0;
 }
 
