@@ -331,6 +331,12 @@ section.project .wrapper .button {
   color: transparent;
 }
 
+.about-me .wrapper p a {
+  display: inline;
+  text-transform: none;
+  color: white;
+}
+
 .about-me .wrapper .button:last-of-type {
   margin-bottom: 0;
 }
@@ -402,7 +408,8 @@ section.project .wrapper .button {
   position: fixed;
 }
 
-.main-footer a {
+.main-footer a,
+.main-footer .jakoodkaz {
   padding: 0 1em;
   white-space: nowrap;
   font-size: 1em;
@@ -416,7 +423,8 @@ section.project .wrapper .button {
   font-weight: 700;
 }
 
-.main-footer a:hover {
+.main-footer a:hover,
+.main-footer .jakoodkaz:hover {
   color: #d66829;
 }
 

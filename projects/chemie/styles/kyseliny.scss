@@ -70,6 +70,7 @@ $white: #f5f5f5;
                     text-transform: uppercase;
                     transition: 250ms ease-in-out;
                 }
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -80,11 +81,13 @@ $white: #f5f5f5;
                     transition: 250ms ease-in-out;
                     border-top-color: $dark;
                 }
+
                 &.active {
                     & span {
                         background-color: $accent;
                         color: $dark;
                     }
+
                     &::before {
                         border-top-color: $accent;
                         transform: translateX(-50%) translateY(.75em);
@@ -256,13 +259,9 @@ $white: #f5f5f5;
 }
 
 .main-footer {
-    & span {
-        text-align: center;
-        padding: .5em 1.25em;
-        margin-bottom: .75em;
-    }
 
-    & a {
+    & a,
+    & .jakoodkaz {
         text-align: center;
         line-height: 24px;
         margin: 8px;

@@ -11,7 +11,8 @@
   position: fixed;
 }
 
-.main-footer a {
+.main-footer a,
+.main-footer .jakoodkaz {
   padding: 0 1em;
   white-space: nowrap;
   font-size: 1em;
@@ -23,6 +24,7 @@
   -webkit-transform: scale(1);
           transform: scale(1);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .main-footer a:hover {
