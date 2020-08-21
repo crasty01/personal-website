@@ -59,6 +59,7 @@
   display: inline;
   text-transform: none;
   color: white;
+  text-decoration: underline;
 }
 
 .about-me .wrapper .button:last-of-type {
