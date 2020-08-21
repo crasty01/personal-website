@@ -421,10 +421,10 @@ section.project .wrapper .button {
   -webkit-transform: scale(1);
           transform: scale(1);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.main-footer a:hover,
-.main-footer .jakoodkaz:hover {
+.main-footer a:hover {
   color: #d66829;
 }
 

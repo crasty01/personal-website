@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin-ext');
+
+* {
+  margin: 0;
+  font-family: Roboto;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 120%;
+  text-decoration: none;
+  color: currentColor;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+  color: $dark;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $white;
+}
+
+::-webkit-scrollbar {
+  display: none
+}
+
+.all {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 .5em;
+}
+
+a,
+img {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}

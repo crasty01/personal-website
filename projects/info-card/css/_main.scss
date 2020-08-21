@@ -1,0 +1,121 @@
+body {
+  background-color: $white;
+}
+
+.btn {
+  padding: .6rem 1rem;
+  border-radius: 6rem;
+  background-color: $accent;
+  color: $white;
+  font-weight: 900;
+  text-transform: none;
+  box-shadow: 0 0 0 $dark;
+  transition: box-shadow 160ms ease-in, transform 160ms ease-in;
+
+  &:hover {
+    transform: translateY(-.3rem);
+    transition: box-shadow 160ms ease-out,
+      transform 160ms ease-out;
+    box-shadow: 0 .3rem .2rem rgba($dark, .15);
+  }
+}
+
+.all {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+section.ukazka {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  gap: 3rem 2rem;
+  position: relative;
+
+  &#ukazka-2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-content: center;
+    place-self: center;
+    width: fit-content;
+
+    &>h3 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+}
+
+/*
+a.scroll {
+  position: absolute;
+  bottom: 2em;
+  height: 3em;
+  width: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: .85em;
+  border: .2em $dark solid;
+  animation: mouse infinite .8s alternate ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: .5em;
+    height: .5em;
+    left: calc(50% - .1em);
+    border: .1em $dark solid;
+    border-radius: .2em;
+    background-color: $dark;
+    animation: middleButton 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes middleButton {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: translateY(.5em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(.5em);
+    opacity: 0;
+  }
+}
+
+@keyframes mouse {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(.125em);
+  }
+}*/
+
+.about {
+  display: grid;
+  place-content: center;
+  background-color: $dark;
+  color: $light;
+  padding: 3em 0;
+  font-size: 1.1em;
+  max-width: calc(100vw - 1em);
+
+  & .wrapper {
+    padding: 0 2em;
+
+    & p {
+      white-space: normal;
+      font-weight: 300;
+      text-align: left;
+      padding: .5em;
+      margin: .1em;
+    }
+  }
+}
