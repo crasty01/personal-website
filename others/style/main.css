@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin-ext");
-
 * {
   margin: 0;
   font-family: Roboto;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 120%;
   text-decoration: none;
   color: currentColor;
@@ -38,7 +37,7 @@ body {
   margin: 0 auto;
   padding: 0 .5em;
   -ms-grid-rows: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
 }
 
 a,
@@ -57,11 +56,11 @@ li {
 
 main {
   -ms-flex-item-align: stretch;
-  -ms-grid-row-align: stretch;
-  align-self: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 
-main>section {
+main > section {
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -75,14 +74,14 @@ main>section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 2em auto;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 16px;
 }
 
@@ -96,7 +95,7 @@ main>section {
   transition: 250ms ease-in-out;
   z-index: 10;
   -webkit-transform: translateX(calc(3.25em / 2));
-  transform: translateX(calc(3.25em / 2));
+          transform: translateX(calc(3.25em / 2));
 }
 
 .button .btn--pop-up {
@@ -105,11 +104,11 @@ main>section {
   height: 3.25em;
   background-color: #d66829;
   -webkit-transform: translateX(calc(3.25em / 2 * (-1)));
-  transform: translateX(calc(3.25em / 2 * (-1)));
+          transform: translateX(calc(3.25em / 2 * (-1)));
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
   -webkit-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
 }
 
 .button .btn--pop-up:before {
@@ -123,37 +122,37 @@ main>section {
   border-bottom: none;
   position: absolute;
   -webkit-transform: translateX(-38px) rotate(45deg);
-  transform: translateX(-38px) rotate(45deg);
+          transform: translateX(-38px) rotate(45deg);
   -webkit-transition: 0ms ease-in-out;
   transition: 0ms ease-in-out;
   -webkit-transition-delay: 250ms;
-  transition-delay: 250ms;
+          transition-delay: 250ms;
 }
 
 .button:hover span {
   -webkit-transform: translateX(0);
-  transform: translateX(0);
+          transform: translateX(0);
 }
 
 .button:hover .btn--pop-up {
   -webkit-transform: translateX(0);
-  transform: translateX(0);
+          transform: translateX(0);
 }
 
 .button:hover .btn--pop-up::before {
   -webkit-transform: translateX(-3px) rotate(45deg);
-  transform: translateX(-3px) rotate(45deg);
+          transform: translateX(-3px) rotate(45deg);
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
   -webkit-transition-delay: 150ms;
-  transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 
 .button.donotanimate span {
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
   -webkit-transform: translateX(0);
-  transform: translateX(0);
+          transform: translateX(0);
 }
 
 .button.donotanimate .btn--pop-up {
@@ -231,18 +230,16 @@ h3 {
     top: calc(50%);
     left: calc(100% - .9em);
     -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
     -webkit-transform: translateY(-50%) scale(0.4);
-    transform: translateY(-50%) scale(0.4);
+            transform: translateY(-50%) scale(0.4);
     -webkit-transition: 250ms ease-in-out;
     transition: 250ms ease-in-out;
   }
-
   h2:hover::before {
     content: "";
     -webkit-transform: translateY(-50%) scale(1);
-    transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
   }
 }
-
 /*# sourceMappingURL=main.css.map */
