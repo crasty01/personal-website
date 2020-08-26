@@ -273,18 +273,21 @@ li {
   text-align: left;
 }
 
-.card .card__info .card__stats {
+.card .card__info .card__stats__number {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: stats;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
+  -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
-}
-
-.card .card__info .card__stats__number {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
   font-size: 1rem;
 }
 
@@ -314,7 +317,7 @@ li {
 }
 
 .card .card__info .card__streamers .streamer:not(:first-child) {
-  margin-right: -.4rem;
+  margin-right: -.35rem;
 }
 
 .card:hover, .card:focus, .card:focus-within {

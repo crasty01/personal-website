@@ -205,19 +205,20 @@
       text-align: left;
     }
 
-    & .card__stats {
+    & .card__stats__number {
       grid-area: stats;
       align-self: center;
       grid-template-columns: 1fr auto;
 
-      &__number {
-        font-size: 1rem;
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto 1fr;
+      font-size: 1rem;
 
-        &::before {
-          transform: scale(.8);
-          display: inline-block;
-          margin-right: .4rem;
-        }
+      &::before {
+        transform: scale(.8);
+        display: inline-block;
+        margin-right: .4rem;
       }
     }
 
@@ -234,7 +235,7 @@
         border: solid $white 1px;
 
         &:not(:first-child) {
-          margin-right: -.4rem;
+          margin-right: -.35rem;
         }
       }
     }
