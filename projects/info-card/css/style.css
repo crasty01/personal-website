@@ -79,7 +79,7 @@ li {
       left: 0;
       right: 0;
       height: 6.5rem;
-      background-image: url('/img/just-chatting.jpg');
+      background-image: url('./img/just-chatting.jpg');
       background-position: top center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -110,7 +110,7 @@ li {
   height: 27px;
   background-size: cover;
   background-repeat: repeat-x;
-  background-image: url("/img/wave.svg");
+  background-image: url("../img/wave.svg");
   -webkit-animation: wave 10s linear forwards infinite;
           animation: wave 10s linear forwards infinite;
 }
@@ -326,7 +326,7 @@ li {
 
 .card:hover .card__back, .card:focus .card__back, .card:focus-within .card__back {
   top: -3rem;
-  bottom: -5.5rem;
+  bottom: auto;
   left: -3rem;
   right: -3rem;
   padding: 3rem;
