@@ -108,11 +108,11 @@ li {
   left: 0;
   right: 0;
   height: 27px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: repeat-x;
   background-image: url("../img/wave.svg");
-  -webkit-animation: wave 10s linear forwards infinite;
-          animation: wave 10s linear forwards infinite;
+  -webkit-animation: wave 1s linear forwards infinite;
+          animation: wave 1s linear forwards infinite;
 }
 
 .card .card__front {
