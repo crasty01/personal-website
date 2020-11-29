@@ -187,6 +187,8 @@ p {
   border-radius: 0.5rem;
   width: auto;
   white-space: nowrap;
+  text-transform: none;
+  font-weight: 500;
 }
 
 .tool .fakt .fakt__content .copy > label::after {
@@ -203,7 +205,8 @@ p {
           clip-path: polygon(100% 0, 100% 100%, 0 50%);
 }
 
-.tool .fakt .fakt__content .copy:hover > label {
+.tool .fakt .fakt__content .copy:hover > label,
+.tool .fakt .fakt__content .copy:focus > label {
   display: block;
 }
 
