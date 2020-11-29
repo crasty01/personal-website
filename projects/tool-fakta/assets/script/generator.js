@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   p = document.querySelector('#content');
   c = document.querySelector('#copy');
   l = document.querySelector('#copy > label');
+  f = document.querySelector('#pocet-faktu');
+  f.innerText = facts.length;
   c.addEventListener('click', () => {
     console.log('clicked');
     var text = p.innerText;
