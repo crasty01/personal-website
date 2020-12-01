@@ -156,6 +156,7 @@ p {
     grid-area: i;
     position: relative;
     user-select: none;
+    margin-top: 3rem;
 
     @media screen and (max-width: 1000px) {
       display: none;
