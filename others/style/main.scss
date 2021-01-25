@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin-ext');
 
-
 $dark: #18202e;
 $accent: #d66829;
 $light: #d5e7e7;
@@ -10,220 +9,218 @@ $btn--pop-up: 3.25em;
 $btn--absolute-position: 1em;
 
 * {
-    margin: 0;
-    font-family: Roboto;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 120%;
-    text-decoration: none;
-    color: currentColor;
+  margin: 0;
+  font-family: Roboto;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 120%;
+  text-decoration: none;
+  color: currentColor;
 }
 
 html,
 body {
-    scroll-behavior: smooth;
-    width: 100%;
-    min-height: 100vh;
-    font-size: 16px;
-    color: $dark;
-    overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+  color: $dark;
+  overflow-x: hidden;
 }
 
 body {
-    background-color: $white;
+  background-color: $white;
 }
 
 ::-webkit-scrollbar {
-    display: none
+  display: none;
 }
 
 .all {
-    display: grid;
-    width: 100%;
-    min-height: 100vh;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 .5em;
-    grid-template-rows: auto 1fr auto;
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  grid-template-rows: auto 1fr auto;
 }
 
 a,
 img {
-    display: block;
-    text-transform: uppercase;
+  display: block;
+  text-transform: uppercase;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 main {
-    align-self: stretch;
+  align-self: stretch;
 
-    &>section {
-        display: grid;
-        place-content: center;
-    }
+  & > section {
+    display: grid;
+    align-content: center;
+    justify-content: stretch;
+  }
 }
 
 .button {
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    margin: 2em auto;
-    cursor: pointer;
-    user-select: none;
-    font-size: 16px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
 
+  & span {
+    padding: 0 1.25em;
+    background-color: $light;
+    font-weight: 500;
+    color: $dark;
+    line-height: $btn--pop-up;
+    transition: 250ms ease-in-out;
+    z-index: 10;
+    transform: translateX(calc(#{$btn--pop-up} / 2));
+  }
+
+  & .btn--pop-up {
+    display: block;
+    width: $btn--pop-up;
+    height: $btn--pop-up;
+    background-color: $accent;
+    transform: translateX(calc(#{$btn--pop-up} / 2 * (-1)));
+    transition: 250ms ease-in-out;
+    transform-origin: 0% 50%;
+
+    &:before {
+      content: '';
+      top: $btn--absolute-position;
+      bottom: $btn--absolute-position;
+      left: $btn--absolute-position;
+      right: $btn--absolute-position;
+      border: $dark 0.65em solid;
+      border-left: none;
+      border-bottom: none;
+      position: absolute;
+      transform: translateX(-38px) rotate(45deg);
+      transition: 0ms ease-in-out;
+      transition-delay: 250ms;
+    }
+  }
+
+  &:hover {
     & span {
-        padding: 0 1.25em;
-        background-color: $light;
-        font-weight: 500;
-        color: $dark;
-        line-height: $btn--pop-up;
-        transition: 250ms ease-in-out;
-        z-index: 10;
-        transform: translateX(calc(#{$btn--pop-up} / 2));
+      transform: translateX(0);
     }
 
     & .btn--pop-up {
-        display: block;
-        width: $btn--pop-up;
-        height: $btn--pop-up;
-        background-color: $accent;
-        transform: translateX(calc(#{$btn--pop-up} / 2 * (-1)));
-        transition: 250ms ease-in-out;
-        transform-origin: 0% 50%;
+      transform: translateX(0);
 
-        &:before {
-            content: "";
-            top: $btn--absolute-position;
-            bottom: $btn--absolute-position;
-            left: $btn--absolute-position;
-            right: $btn--absolute-position;
-            border: $dark .65em solid;
-            border-left: none;
-            border-bottom: none;
-            position: absolute;
-            transform: translateX(-38px) rotate(45deg);
-            transition: 0ms ease-in-out;
-            transition-delay: 250ms;
-        }
+      &::before {
+        transform: translateX(-3px) rotate(45deg);
+        transition: 250ms ease-in-out;
+        transition-delay: 150ms;
+      }
+    }
+  }
+
+  &.donotanimate {
+    span {
+      transition: 250ms ease-in-out;
+      transform: translateX(0);
+    }
+
+    & .btn--pop-up {
+      display: none;
     }
 
     &:hover {
-        & span {
-            transform: translateX(0);
-        }
-
-        & .btn--pop-up {
-            transform: translateX(0);
-
-            &::before {
-                transform: translateX(-3px) rotate(45deg);
-                transition: 250ms ease-in-out;
-                transition-delay: 150ms;
-            }
-        }
-
+      & span {
+        background-color: $accent;
+      }
     }
-
-    &.donotanimate {
-        span {
-            transition: 250ms ease-in-out;
-            transform: translateX(0);
-        }
-
-        & .btn--pop-up {
-            display: none;
-        }
-
-        &:hover {
-            & span {
-                background-color: $accent;
-            }
-        }
-    }
+  }
 }
 
 .button.dark {
-    span {
-        background-color: $dark;
-        color: $light;
-    }
+  span {
+    background-color: $dark;
+    color: $light;
+  }
 }
-
 
 main {
-    display: grid;
-    grid-row-gap: 4em;
-    margin: 2em 0;
+  display: grid;
+  grid-row-gap: 4em;
+  margin: 2em 0;
 }
 
-
 h1 {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    padding: .5em .75em;
-    font-weight: 900;
-    margin: 0 auto;
-    line-height: 100%;
-    margin-bottom: .25em;
-    position: relative;
-    display: block;
-    width: fit-content;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.5em 0.75em;
+  font-weight: 900;
+  margin: 0 auto;
+  line-height: 100%;
+  margin-bottom: 0.25em;
+  position: relative;
+  display: block;
+  width: fit-content;
 }
 
 h2 {
-    text-align: center;
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    padding: .75em 1em;
-    margin: 0 auto;
-    line-height: 100%;
-    margin-bottom: .25em;
-    position: relative;
-    display: block;
-    width: fit-content;
+  text-align: center;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  padding: 0.75em 1em;
+  margin: 0 auto;
+  line-height: 100%;
+  margin-bottom: 0.25em;
+  position: relative;
+  display: block;
+  width: fit-content;
 }
 
 h3 {
-    text-align: center;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    padding: .5em .75em;
-    margin: 0 auto;
-    line-height: 100%;
-    margin-bottom: .25em;
-    display: block;
-    width: fit-content;
+  text-align: center;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 0.5em 0.75em;
+  margin: 0 auto;
+  line-height: 100%;
+  margin-bottom: 0.25em;
+  display: block;
+  width: fit-content;
 }
 
-@media (min-width:700px) {
-    h2 {
-        &::before {
-            content: "";
-            height: .75em;
-            width: .75em;
-            position: absolute;
-            background-color: $accent;
-            top: calc(50%);
-            left: calc(100% - .9em);
-            transform-origin: 0% 100%;
-            transform: translateY(-50%) scale(.4);
-            transition: 250ms ease-in-out;
-        }
-
-        &:hover {
-            &::before {
-                content: "";
-                transform: translateY(-50%) scale(1);
-            }
-        }
+@media (min-width: 700px) {
+  h2 {
+    &::before {
+      content: '';
+      height: 0.75em;
+      width: 0.75em;
+      position: absolute;
+      background-color: $accent;
+      top: calc(50%);
+      left: calc(100% - 0.9em);
+      transform-origin: 0% 100%;
+      transform: translateY(-50%) scale(0.4);
+      transition: 250ms ease-in-out;
     }
+
+    &:hover {
+      &::before {
+        content: '';
+        transform: translateY(-50%) scale(1);
+      }
+    }
+  }
 }

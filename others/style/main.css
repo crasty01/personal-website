@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
 }
@@ -63,7 +63,11 @@ main {
 main > section {
   display: -ms-grid;
   display: grid;
-  place-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 .button {
@@ -112,7 +116,7 @@ main > section {
 }
 
 .button .btn--pop-up:before {
-  content: "";
+  content: '';
   top: 1em;
   bottom: 1em;
   left: 1em;
@@ -179,11 +183,11 @@ h1 {
   text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   font-weight: 900;
   margin: 0 auto;
   line-height: 100%;
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
   position: relative;
   display: block;
   width: -webkit-fit-content;
@@ -195,10 +199,10 @@ h2 {
   text-align: center;
   font-size: 1.75rem;
   text-transform: uppercase;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
   margin: 0 auto;
   line-height: 100%;
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
   position: relative;
   display: block;
   width: -webkit-fit-content;
@@ -210,10 +214,10 @@ h3 {
   text-align: center;
   font-size: 1.25rem;
   text-transform: uppercase;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   margin: 0 auto;
   line-height: 100%;
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -222,13 +226,13 @@ h3 {
 
 @media (min-width: 700px) {
   h2::before {
-    content: "";
-    height: .75em;
-    width: .75em;
+    content: '';
+    height: 0.75em;
+    width: 0.75em;
     position: absolute;
     background-color: #d66829;
     top: calc(50%);
-    left: calc(100% - .9em);
+    left: calc(100% - 0.9em);
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
     -webkit-transform: translateY(-50%) scale(0.4);
@@ -237,7 +241,7 @@ h3 {
     transition: 250ms ease-in-out;
   }
   h2:hover::before {
-    content: "";
+    content: '';
     -webkit-transform: translateY(-50%) scale(1);
             transform: translateY(-50%) scale(1);
   }
