@@ -113,8 +113,8 @@
 .gallery .wrapper.project-wrapper .project figure .description .arrow:before {
   -webkit-transition: 0ms;
   transition: 0ms;
-  -webkit-transform: none;
-          transform: none;
+  -webkit-transform: translate(calc(-50% - 3px), -50%) rotate(45deg);
+          transform: translate(calc(-50% - 3px), -50%) rotate(45deg);
 }
 
 .gallery .wrapper.project-wrapper .project:hover figure img {
@@ -132,8 +132,8 @@
 .gallery .wrapper.project-wrapper .project:hover figure .description .arrow:before {
   -webkit-transition: 0;
   transition: 0;
-  -webkit-transform: none;
-          transform: none;
+  -webkit-transform: translate(calc(-50% - 3px), -50%) rotate(45deg);
+          transform: translate(calc(-50% - 3px), -50%) rotate(45deg);
 }
 
 @media (min-width: 700px) {
@@ -157,8 +157,8 @@
   .gallery .wrapper .project figure .description .arrow:before {
     -webkit-transition: 250ms ease-in-out;
     transition: 250ms ease-in-out;
-    -webkit-transform: translateX(-3px) rotate(45deg);
-            transform: translateX(-3px) rotate(45deg);
+    -webkit-transform: translate(calc(-50% - 3px), -50%) rotate(45deg);
+            transform: translate(calc(-50% - 3px), -50%) rotate(45deg);
   }
 }
 /*# sourceMappingURL=gallery.css.map */
