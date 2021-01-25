@@ -22,6 +22,7 @@ body {
 
 body {
   background-color: $dark;
+  background-color: #0e0e10;
 }
 
 ::-webkit-scrollbar {
@@ -32,22 +33,37 @@ body {
   display: grid;
   width: 100%;
   min-height: 100vh;
-  max-width: 2000px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0;
-  grid-template-rows: auto auto 1fr auto;
+  padding: 0 0.5em;
+  grid-template-rows: auto 1fr auto;
 }
 
-a,
-img {
+img,
+a {
   display: block;
-  text-transform: uppercase;
-}
-
-img {
-  max-width: 100%;
 }
 
 li {
   list-style: none;
+}
+
+main {
+  align-self: stretch;
+  display: grid;
+  grid-row-gap: 4em;
+  margin: 2em 0;
+
+  & > section {
+    display: grid;
+    place-content: center;
+  }
+}
+
+.main-footer a {
+  color: inherit;
+
+  &:hover {
+    color: $twitch-light;
+  }
 }

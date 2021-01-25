@@ -1,50 +1,92 @@
 .hero {
-  padding-top: 88px;
-  min-height: 60vh;
-  background-color: #000000;
+  min-height: 100vh;
   display: grid;
-  justify-content: center;
-  align-content: center;
-  color: #ffffff;
+  place-content: center;
 
   & .title {
-    font-size: 4rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    width: 1200px;
-    max-width: calc(100vw - 2 * 6rem);
     position: relative;
+    width: 100vw;
+    max-width: 1200px;
     padding-bottom: 2rem;
-    z-index: 10;
-    & > span {
-      max-width: 900px;
-      position: relative;
+
+    & h2 {
+      max-width: 15em;
+      padding: 1rem 0;
       display: block;
-      margin-left: 0;
-      padding: 1.2rem 0;
+      font-size: 4rem;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: 900;
     }
     &::before,
     &::after {
       content: '';
       position: absolute;
+      z-index: -1;
       top: 0;
+      right: 5rem;
+      left: 5rem;
       bottom: 2rem;
-      right: 4rem;
-      left: 4rem;
-      background-color: #222127;
+      background-color: $accent;
     }
     &::after {
-      height: calc(12px * 23);
-      bottom: 0;
+      z-index: -2;
+      top: 2rem;
       right: 0;
-      top: auto;
-      left: auto;
-      width: 30rem;
-      max-width: 40%;
-      z-index: -1;
-      background-image: radial-gradient(rgba(#222127, 0.66) 33%, transparent calc(33% + 1px));
-      background-color: transparent;
-      background-size: 13px 13px;
+      left: 50%;
+      bottom: 0;
+      background: url(../img/bg.svg);
     }
+  }
+
+  a#scroll {
+    position: absolute;
+    bottom: 2em;
+    height: 3em;
+    width: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.85em;
+    border: 0.2em $white solid;
+    animation: mouse infinite 0.8s alternate ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0.5em;
+      height: 0.5em;
+      left: calc(50% - 0.1em);
+      border: 0.1em $white solid;
+      border-radius: 0.2em;
+      background-color: $white;
+      animation: middleButton 1.6s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes middleButton {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: translateY(0.5em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0.5em);
+    opacity: 0;
+  }
+}
+
+@keyframes mouse {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0.125em);
   }
 }

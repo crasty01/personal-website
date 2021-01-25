@@ -43,18 +43,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="./others/style/style.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/solid.css"
-      integrity="sha384-TN9eFVoW87zV3Q7PfVXNZFuCwsmMwkuOTOUsyESfMS9uwDTf7yrxXH78rsXT3xf0"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/fontawesome.css"
-      integrity="sha384-PRy/NDAXVTUcXlWA3voA+JO/UMtzWgsYuwMxjuu6DfFPgzJpciUiPwgsvp48fl3p"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <script src="./others/script/header-animation.js"></script>
     <script src="./others/script/card.js"></script>
@@ -84,51 +73,13 @@
       </header>
       <div class="hero">
         <div class="title">
-          <span>Copypasty na agraelův stream pro líné mrdky, jako jsem já</span>
+          <h2>Copypasty na agraelův stream pro líné mrdky, jako jsem já</h2>
         </div>
+        <a id="scroll" href="#main"></a>
       </div>
-      <main class="main">
-        <!--
-        <div class="card">
-          <div class="copy">
-            <svg class="clipboard" style="width: 24px; height: 24px" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3"
-              />
-            </svg>
-            <svg class="clipboard-check" style="width: 24px; height: 24px" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"
-              />
-            </svg>
-          </div>
-          <div class="inside">
-            <h2>oceánový muž</h2>
-            <p>
-              OCEAN MAN 🌊 😍 Take me by the hand ✋ lead me to the land that you understand 🙌 🌊 OCEAN MAN 🌊 😍 The voyage 🚲 to the corner of the 🌎 globe is a real trip 👌 🌊 OCEAN MAN 🌊 😍 The
-              crust of a tan man 👳 imbibed by the sand 👍 Soaking up the 💦 thirst of the land 💯
-            </p>
-          </div>
-        </div>-->
-
+      <main class="main" id="main">
         <section class="articles">
           <article class="article card">
-            <div class="copy">
-              <svg class="clipboard" style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3"
-                />
-              </svg>
-              <svg class="clipboard-check" style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"
-                />
-              </svg>
-            </div>
             <img src="./others/img/ocean-man.jpg" alt="obrázek  článku - student v depresi" />
             <div class="inside">
               <h2>oceánový muž</h2>
@@ -136,28 +87,38 @@
                 OCEAN MAN 🌊 😍 Take me by the hand ✋ lead me to the land that you understand 🙌 🌊 OCEAN MAN 🌊 😍 The voyage 🚲 to the corner of the 🌎 globe is a real trip 👌 🌊 OCEAN MAN 🌊 😍
                 The crust of a tan man 👳 imbibed by the sand 👍 Soaking up the 💦 thirst of the land 💯
               </p>
+              <div class="buttons">
+                <button class="button">zkopírovat</button>
+                <button class="button secondary material-icons">favorite_border</i>
+              </div>
             </div>
           </article>
-
           <article class="article card">
-            <div class="copy">
-              <svg class="clipboard" style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3"
-                />
-              </svg>
-              <svg class="clipboard-check" style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"
-                />
-              </svg>
-            </div>
             <img src="./others/img/ocean-man.jpg" alt="obrázek  článku - student v depresi" />
             <div class="inside">
-              <h2>Prozatimní název článku blogu, který je celkem dlouhý</h2>
-              <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Nullam justo enim, consectetuer nec.</p>
+              <h2>oceánový muž</h2>
+              <p class="text">
+                OCEAN MAN 🌊 😍 Take me by the hand ✋ lead me to the land that you understand 🙌 🌊 OCEAN MAN 🌊 😍 The voyage 🚲 to the corner of the 🌎 globe is a real trip 👌 🌊 OCEAN MAN 🌊 😍
+                The crust of a tan man 👳 imbibed by the sand 👍 Soaking up the 💦 thirst of the land 💯
+              </p>
+              <div class="buttons">
+                <button class="button">zkopírovat</button>
+                <button class="button secondary material-icons">favorite_border</i>
+              </div>
+            </div>
+          </article>
+          <article class="article card">
+            <img src="./others/img/ocean-man.jpg" alt="obrázek  článku - student v depresi" />
+            <div class="inside">
+              <h2>oceánový muž</h2>
+              <p class="text">
+                OCEAN MAN 🌊 😍 Take me by the hand ✋ lead me to the land that you understand 🙌 🌊 OCEAN MAN 🌊 😍 The voyage 🚲 to the corner of the 🌎 globe is a real trip 👌 🌊 OCEAN MAN 🌊 😍
+                The crust of a tan man 👳 imbibed by the sand 👍 Soaking up the 💦 thirst of the land 💯
+              </p>
+              <div class="buttons">
+                <button class="button">zkopírovat</button>
+                <button class="button secondary material-icons">favorite_border</i>
+              </div>
             </div>
           </article>
         </section>

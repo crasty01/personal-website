@@ -1,35 +1,10 @@
 .main-footer {
   display: grid;
-  //margin: 0.5em 0;
   place-content: center;
   padding: 2em 0;
-  //padding-top: 5rem;
   align-self: flex-end;
-  background-color: #000000;
+  background-color: $dark;
   position: relative;
-  /*
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 3rem;
-    right: 3rem;
-    left: 3rem;
-    background-color: #18171d;
-  }*/
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 3rem;
-    right: 0;
-    background-color: $purple-light;
-  }
-
-  &.fixed {
-    position: fixed;
-  }
 
   & a,
   & .jakoodkaz {
@@ -42,10 +17,10 @@
     transform: scale(1);
     font-weight: 700;
     text-transform: uppercase;
-    color: #bf94ff;
+    color: $white;
   }
 
   & a:hover {
-    color: #ffffff;
+    color: $highlight;
   }
 }

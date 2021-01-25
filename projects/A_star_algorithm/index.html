@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--FAVICONS - FOR ANDROID, CHROME, APPLE ...-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../others/images/index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../others/images/index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="194x194" href="../../others/images/index/favicon-194x194.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../../others/images/index/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../others/images/index/favicon-16x16.png" />
+    <!--<link rel="manifest" href="../../others/images/index/site.webmanifest">-->
+    <link rel="mask-icon" href="../../others/images/index/safari-pinned-tab.svg" color="#18202e" />
+    <meta name="apple-mobile-web-app-title" content="Vondra" />
+    <meta name="application-name" content="Vondra" />
+    <meta name="msapplication-TileColor" content="#f5f5f5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--FACEBOOK SHARING-->
+    <meta property="og:image:width" content="262" />
+    <meta property="og:image:height" content="262" />
+    <meta property="og:title" content="Tool fakta" />
+    <meta property="og:description" content="Ty nejlepší fakta o award-winnig kapele Tool" />
+    <meta property="og:url" content="https://danielvondra.tk" />
+    <meta property="og:image" content="https://danielvondra.tk/others/images/gallery/tool-fakta.jpg" />
+
+    <!--GOOGLE ANALYTICS (gtag.js)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773212-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-136773212-1');
+    </script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/others/style/header.css" />
+    <link rel="stylesheet" href="/others/style/footer.css" />
+    <link rel="stylesheet" href="./assets/css/all.css" />
+
+    <!--
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/solid.css"
+      integrity="sha384-TN9eFVoW87zV3Q7PfVXNZFuCwsmMwkuOTOUsyESfMS9uwDTf7yrxXH78rsXT3xf0"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/fontawesome.css"
+      integrity="sha384-PRy/NDAXVTUcXlWA3voA+JO/UMtzWgsYuwMxjuu6DfFPgzJpciUiPwgsvp48fl3p"
+      crossorigin="anonymous"
+    />-->
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="assets/js/sketch.js"></script>
+    <script src="./assets/js/name.js"></script>
+    <script src="./assets/js/point.js"></script>
+    <script src="./assets/js/edge.js"></script>
+    <script src="./assets/js/a_star.js"></script>
+  </head>
+  <body>
+    <div class="all">
+      <header class="main-header">
+        <nav class="nav">
+          <figure class="logo">
+            <a href="/">
+              <svg viewBox="0 0 570 570">
+                <g>
+                  <path d="M570,442A128,128,0,0,1,442,570H0V442Z" />
+                  <path d="M570,285v29H442V285A157,157,0,0,0,285,128H128V314H0V0H285C442.4,0,570,127.6,570,285Z" />
+                </g>
+                <title><h1>Daniel Vondra</h1></title>
+              </svg>
+            </a>
+          </figure>
+          <img src="" alt="" />
+          <ul>
+            <li><a href="/projects/">projekty</a></li>
+            <li><a href="/about/">o mně</a></li>
+            <li><a href="/contact/">kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="algorithm">
+          <div class="title">
+            <h2>A* search algorithm</h2>
+            <p>
+              A* je počítačový algoritmus používaný pro vyhledávání optimálních cest v kladně ohodnocených grafech. Byl vytvořen v roce 1968 Peterem Hartem, Nilsem Nilssonem a Bertramem Raphaelem.
+              Používá stejné principy jako Dijkstrův algoritmus, ale přidává navíc heuristický prvek (odhad délky cesty k cíli). Více info na <a href="https://cs.wikipedia.org/wiki/A*">wiki</a>.
+            </p>
+          </div>
+          <div class="content">
+            <div id="canvas_parent" class="canvas"></div>
+            <div class="interface">
+              <button class="button phase-1 icon vertices" id="vertices"><span class="hidden">add vertices</span></button>
+              <button class="button phase-2 icon edges" id="edges"><span class="hidden">add edges</span></button>
+              <button class="button phase-2 submit calculate" id="calculate"><span>calculate</span></button>
+              <span class="error" id="error_canvas">A* je počítačový algoritmus používaný pro vyhledávání optimáln</span>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <a href="https://danielvondra.tk/">&copy; Daniel Vondra 2020</a>
+      </footer>
+    </div>
+  </body>
+</html>

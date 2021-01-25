@@ -43,7 +43,7 @@
         &:hover {
           svg {
             //transform: scale(1.1);
-            fill: $accent;
+            fill: $purple-light;
           }
         }
 
@@ -86,7 +86,7 @@
             transform: scaleX(0);
             transition: transform 250ms ease-in-out;
             transform-origin: 100% 50%;
-            background-color: $accent;
+            background-color: $purple-light;
           }
 
           &:hover {
@@ -105,7 +105,7 @@
             right: 0.5em;
             top: 0;
             height: 5px;
-            background-color: $accent;
+            background-color: $purple-light;
           }
         }
       }

@@ -1,0 +1,41 @@
+.button,
+button {
+  all: unset;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 900;
+  background-color: $button;
+  cursor: pointer;
+  border: 3px solid $button;
+  border-radius: $corner-radius;
+
+  .material-icons {
+    display: block;
+    color: $button;
+    font-weight: 900;
+  }
+
+  &:hover {
+    background-color: $button-hover;
+    border: 3px solid $button-hover;
+
+    .material-icons {
+      color: $button-hover;
+    }
+  }
+
+  &.heart {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    //padding: 0.5rem;
+    //margin: -0.5rem;
+    padding: 0;
+    color: $button-hover;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
