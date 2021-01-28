@@ -51,7 +51,9 @@ img {
   display: block;
   text-transform: uppercase;
 }
-
+a {
+  cursor: pointer;
+}
 img {
   max-width: 100%;
 }
@@ -153,6 +155,69 @@ main {
   span {
     background-color: $dark;
     color: $light;
+  }
+}
+
+img.emote {
+  display: inline-block;
+  min-width: 1.7em;
+  width: 1.7em;
+  margin: 0 0 -0.5em 0 !important;
+  padding: 0 0.2em;
+}
+
+.secret {
+  position: relative;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+
+  & .secret-child {
+    font-weight: 500;
+    opacity: 0;
+    display: none;
+    //display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: $light;
+    white-space: nowrap;
+    padding: 1rem;
+    color: $dark;
+    transition: opacity 200ms ease-in;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: calc(100% - 1px);
+      left: 50%;
+      transform: translateX(-50%);
+      //background-color: $light;
+      width: 0;
+      height: 0;
+      border-left: transparent 0.7rem solid;
+      border-right: transparent 0.7rem solid;
+      border-top: $light 0.7rem solid;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    & .secret-child {
+      display: inline-block;
+      animation: appear 200ms ease-in forwards;
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

@@ -46,6 +46,10 @@ img {
   text-transform: uppercase;
 }
 
+a {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
 }
@@ -170,6 +174,77 @@ main > section {
 .button.dark span {
   background-color: #18202e;
   color: #d5e7e7;
+}
+
+img.emote {
+  display: inline-block;
+  min-width: 1.7em;
+  width: 1.7em;
+  margin: 0 0 -0.5em 0 !important;
+  padding: 0 0.2em;
+}
+
+.secret {
+  position: relative;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+}
+
+.secret .secret-child {
+  font-weight: 500;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  background-color: #d5e7e7;
+  white-space: nowrap;
+  padding: 1rem;
+  color: #18202e;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+.secret .secret-child::after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: calc(100% - 1px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: transparent 0.7rem solid;
+  border-right: transparent 0.7rem solid;
+  border-top: #d5e7e7 0.7rem solid;
+}
+
+.secret:hover .secret-child, .secret:focus .secret-child {
+  display: inline-block;
+  -webkit-animation: appear 200ms ease-in forwards;
+          animation: appear 200ms ease-in forwards;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 main {
