@@ -48,4 +48,6 @@ const timer_f = () => {
   }
 };
 
+timer_f()
+
 const timer = setInterval(timer_f, 1000);
