@@ -87,6 +87,13 @@ main > section {
   fill: #a66bff;
 }
 
+@media screen and (max-width: 1050px) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 h2,
 h3 {
   font-size: 4rem;
@@ -325,6 +332,38 @@ img.inline {
   100% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timer-wrapper .timer {
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+  }
+  .timer-wrapper .timer .t {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .timer-wrapper .timer .t::after {
+    padding-left: 2rem;
+  }
+  .timer-wrapper .timer .t.d::after {
+    content: 'dny';
+  }
+  .timer-wrapper .timer .t.h::after {
+    content: 'hodiny';
+  }
+  .timer-wrapper .timer .t.m::after {
+    content: 'minuty';
+  }
+  .timer-wrapper .timer .t.s::after {
+    content: 'sekundy';
   }
 }
 /*# sourceMappingURL=all.css.map */

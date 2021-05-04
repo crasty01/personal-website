@@ -86,3 +86,9 @@ main {
 .main-header .nav .logo a:hover svg {
   fill: $twitch-light;
 }
+
+@media screen and (max-width: 1050px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}

@@ -208,3 +208,32 @@ $as: 1.2rem;
     transform: translate(0, 0);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .timer-wrapper .timer {
+    grid-template-columns: repeat(1, auto);
+
+    & .t {
+      grid-template-columns: repeat(2, auto);
+      align-items: center;
+      justify-content: left;
+
+      &::after {
+        padding-left: 2rem;
+      }
+
+      &.d::after {
+        content: 'dny';
+      }
+      &.h::after {
+        content: 'hodiny';
+      }
+      &.m::after {
+        content: 'minuty';
+      }
+      &.s::after {
+        content: 'sekundy';
+      }
+    }
+  }
+}
