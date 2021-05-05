@@ -10,7 +10,7 @@ const getDiffrence = () => {
   const n = new Date();
   const p = new Date(time);
 
-  console.log('aktuální čas:\n' + n);
+  //console.log('aktuální čas:\n' + n);
   //console.log('pátek, 21:30:\n' + p);
 
   let diff = p - n;
@@ -47,5 +47,7 @@ const timer_f = () => {
     d_el.innerText = ('' + d).padStart(2, '0');
   }
 };
+
+timer_f()
 
 const timer = setInterval(timer_f, 1000);
