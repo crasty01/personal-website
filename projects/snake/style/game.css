@@ -9,7 +9,7 @@ canvas {
 }
 
 .game .onmobile span {
-  padding: .75em 2em;
+  padding: 0.75em 2em;
   -ms-grid-column-align: center;
       justify-self: center;
   max-width: 400px;
@@ -19,6 +19,14 @@ canvas {
 
 .game .nadpis {
   text-align: center;
+}
+
+.game #canvas {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .game canvas {
@@ -36,7 +44,7 @@ canvas {
     padding: 3em 0;
   }
   .game .onmobile::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 300px;
     height: 300px;
@@ -46,7 +54,7 @@ canvas {
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .075;
+    opacity: 0.075;
   }
 }
 /*# sourceMappingURL=game.css.map */

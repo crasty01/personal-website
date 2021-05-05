@@ -190,64 +190,64 @@
 }
 
 .acid .up .up-1 {
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  height: 67px;
-  width: 67px;
-  left: 65px;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  height: 62px;
+  width: 62px;
+  left: 49px;
 }
 
 .acid .up .up-1::after {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
 }
 
 .acid .up .up-2 {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-delay: -5s;
-          animation-delay: -5s;
-  height: 36px;
-  width: 36px;
-  left: 128px;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  height: 50px;
+  width: 50px;
+  left: 18px;
 }
 
 .acid .up .up-2::after {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-}
-
-.acid .up .up-3 {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-  height: 38px;
-  width: 38px;
-  left: 80px;
-}
-
-.acid .up .up-3::after {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
 }
 
-.acid .up .up-4 {
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
+.acid .up .up-3 {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  height: 70px;
+  width: 70px;
+  left: 75px;
+}
+
+.acid .up .up-3::after {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
-  height: 44px;
-  width: 44px;
-  left: 96px;
+}
+
+.acid .up .up-4 {
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  height: 59px;
+  width: 59px;
+  left: 64px;
 }
 
 .acid .up .up-4::after {
@@ -258,13 +258,13 @@
 }
 
 .acid .up .up-5 {
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  height: 31px;
-  width: 31px;
-  left: 114px;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  height: 44px;
+  width: 44px;
+  left: 51px;
 }
 
 .acid .up .up-5::after {
@@ -277,45 +277,45 @@
 .acid .up .up-6 {
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-  height: 31px;
-  width: 31px;
-  left: 99px;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  height: 47px;
+  width: 47px;
+  left: 17px;
 }
 
 .acid .up .up-6::after {
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
 }
 
 .acid .up .up-7 {
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  height: 46px;
-  width: 46px;
-  left: 147px;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  height: 53px;
+  width: 53px;
+  left: 25px;
 }
 
 .acid .up .up-7::after {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
 }
 
 .acid .up .up-8 {
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  height: 41px;
-  width: 41px;
-  left: 95px;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  height: 55px;
+  width: 55px;
+  left: 36px;
 }
 
 .acid .up .up-8::after {
@@ -326,30 +326,30 @@
 }
 
 .acid .up .up-9 {
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-  height: 56px;
-  width: 56px;
-  left: 81px;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  height: 60px;
+  width: 60px;
+  left: 89px;
 }
 
 .acid .up .up-9::after {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
 }
 
 .acid .up .up-10 {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
-  height: 50px;
-  width: 50px;
-  left: 68px;
+  height: 39px;
+  width: 39px;
+  left: 88px;
 }
 
 .acid .up .up-10::after {
@@ -360,18 +360,18 @@
 }
 
 .acid .up .up-11 {
-  -webkit-animation-duration: 9s;
-          animation-duration: 9s;
-  -webkit-animation-delay: -4s;
-          animation-delay: -4s;
-  height: 40px;
-  width: 40px;
-  left: 33px;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  height: 61px;
+  width: 61px;
+  left: 44px;
 }
 
 .acid .up .up-11::after {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
 }
@@ -379,52 +379,52 @@
 .acid .up .up-12 {
   -webkit-animation-duration: 8s;
           animation-duration: 8s;
-  -webkit-animation-delay: -4s;
-          animation-delay: -4s;
-  height: 52px;
-  width: 52px;
-  left: 161px;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  height: 51px;
+  width: 51px;
+  left: 110px;
 }
 
 .acid .up .up-12::after {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
 }
 
 .acid .up .up-13 {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  height: 63px;
-  width: 63px;
-  left: 20px;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  height: 39px;
+  width: 39px;
+  left: 22px;
 }
 
 .acid .up .up-13::after {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-}
-
-.acid .up .up-14 {
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-  height: 66px;
-  width: 66px;
-  left: 159px;
-}
-
-.acid .up .up-14::after {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
+}
+
+.acid .up .up-14 {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  height: 51px;
+  width: 51px;
+  left: 82px;
+}
+
+.acid .up .up-14::after {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
 }
 
 @-webkit-keyframes bubble-size {
